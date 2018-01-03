@@ -18,8 +18,6 @@ public class AttackPlayerRanged : AbstractAttack {
 
     private void AttackAction(GameObject self) {
 
-        Debug.Log("!!!");
-
         Animator animator = self.GetComponent<Animator>();
 
         float attackDamage = self.transform.root.gameObject.GetComponent<UnitStats>().attackDamage;

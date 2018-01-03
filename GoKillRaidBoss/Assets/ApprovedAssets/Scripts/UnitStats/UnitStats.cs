@@ -70,6 +70,9 @@ public class UnitStats : MonoBehaviour {
 
     [HideInInspector] public List<GameObject> targetHitList = new List<GameObject>();
     [HideInInspector] public GameObject attackTarget;
+
+    //Defence
+    public float armor;
     #endregion
 
     //Init
@@ -92,8 +95,21 @@ public class UnitStats : MonoBehaviour {
     #endregion
 
     #region TakingDamage
+
+    float DamageArmorReduce(float damage) {
+        return damage -= armor;
+    }
+
     public void TakingDamage(GameObject from, float damage) {
-        HealthCur -= damage;
+
+        Debug.Log(damage);
+
+        float damageReducedByArmor = DamageArmorReduce(damage);
+
+        Debug.Log(damageReducedByArmor);
+
+
+        HealthCur -= damageReducedByArmor;
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Hit"))   //Проигрывается ли анимация получения удара? Если да то ненадо снова ее слать (1)значит 2 слой в аниматоре
         {
             animator.SetTrigger("Hit");

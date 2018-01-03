@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -14,7 +15,7 @@ public class SetTargetToMoveAction : Action {
 
         animator.SetInteger("Attack", 0);
         if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Idle") {                   //Ждет пока закончится клип атаки
-            controller.transform.root.gameObject.GetComponent<AIPath>().target = controller.targetForChaseOrAttack.transform;
+            controller.transform.root.gameObject.GetComponent<AIDestinationSetter>().target = controller.targetForChaseOrAttack.transform;
             controller.transform.root.gameObject.GetComponent<AIPath>().canMove = true;
             animator.SetBool("Move", true);
         }

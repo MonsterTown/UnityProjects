@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class AttackAction : Action {
         Animator animator = controller.GetComponent<Animator>();
 
         animator.SetBool("Move", false);
-        controller.GetComponent<AIPath>().target = null;
+        controller.GetComponent<AIDestinationSetter>().target = null;
         controller.GetComponent<AIPath>().canMove = false;
 
         animator.SetInteger("Attack", Random.Range(1, 8));

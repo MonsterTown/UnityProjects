@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Pathfinding;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ public class IdleAction : Action {
         controller.GetComponent<Animator>().SetBool("Move", false);
         controller.GetComponent<Animator>().SetInteger("Attack", 0);
         controller.targetForChaseOrAttack = null;
-        controller.GetComponent<AIPath>().target = null;
+        controller.GetComponent<AIDestinationSetter>().target = null;
         controller.GetComponent<AIPath>().canMove = false;
     }
 }
