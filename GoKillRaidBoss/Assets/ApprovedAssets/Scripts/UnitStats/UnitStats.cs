@@ -102,13 +102,7 @@ public class UnitStats : MonoBehaviour {
 
     public void TakingDamage(GameObject from, float damage) {
 
-        Debug.Log(damage);
-
         float damageReducedByArmor = DamageArmorReduce(damage);
-
-        Debug.Log(damageReducedByArmor);
-
-
         HealthCur -= damageReducedByArmor;
         if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Hit"))   //Проигрывается ли анимация получения удара? Если да то ненадо снова ее слать (1)значит 2 слой в аниматоре
         {

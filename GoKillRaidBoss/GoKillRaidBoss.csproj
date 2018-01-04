@@ -294,7 +294,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ApprovedAssets\MyPrefabs\HealthBarEnemy\HealthBarEnemyScript.cs" />
+    <Compile Include="Assets\ApprovedAssets\MyPrefabs\UI\HealthBarEnemy\HealthBarEnemyScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Animator\AnimatorDiveScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AnimatorSounds.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AudioController.cs" />
@@ -308,6 +308,25 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\MobileController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Projectile\ProjectileScript.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\Action.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\AlertAction.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\AttackableCooldownDecision.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\AttackableDistanceDecision.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\AttackAction.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\Decision.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\IdleAction.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\LookDecision.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\SetClosestEnemyAction.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\SetTargetToMoveAction.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\State.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\StateController.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\Transitions.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\AbstractAttack.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\AbstractDead.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\AttackBoss.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\AttackPlayerRanged.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\DeadBoss.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\UnitMechanics\DeadPlayer.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UnitOnMouseOver.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UnitStats\UnitStats.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UpdateCamera.cs" />
@@ -418,25 +437,6 @@
     <Compile Include="Assets\AstarPathfindingProject\Utilities\ProfileHelper.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\RetainedGizmos.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Utilities\UnityReferenceHelper.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\Action.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\AlertAction.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\AttackableCooldownDecision.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\AttackableDistanceDecision.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\AttackAction.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\Decision.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\IdleAction.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\LookDecision.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\SetClosestEnemyAction.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\SetTargetToMoveAction.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\State.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\StateController.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\StateMachine\Transitions.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\AbstractAttack.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\AbstractDead.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\AttackBoss.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\AttackPlayerRanged.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\DeadBoss.cs" />
-    <Compile Include="Assets\PluggableAI\Scripts\UnitMechanics\DeadPlayer.cs" />
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\IntArrayComparer.cs" />
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\TerrainNeighbours.cs" />
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\Third Party\Complex.cs" />
@@ -444,6 +444,8 @@
     <Compile Include="Assets\UIMenuController.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\ApprovedAssets\Fonts\Noto_Sans\LICENSE.txt" />
+    <None Include="Assets\ApprovedAssets\Fonts\Nunito\OFL.txt" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />
