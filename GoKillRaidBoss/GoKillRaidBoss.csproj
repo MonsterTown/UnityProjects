@@ -296,10 +296,15 @@
   <ItemGroup>
     <Compile Include="Assets\ApprovedAssets\MyPrefabs\UI\HealthBarEnemy\HealthBarEnemyScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Animator\AnimatorDiveScript.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\CharacterStat.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\SkillPointsAdd.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\StatModifier.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\UI_AttributesUpdateValue.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AnimatorSounds.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\CharacterMechanics.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\FPS.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\GameController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GameObjectTags.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GameSettingsScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GetCurrentAnimatorClipInfoExample.cs" />
