@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Kryz.CharacterStats;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.ThirdPerson;
@@ -150,6 +151,43 @@ public class UnitStats : MonoBehaviour {
             transform.LookAt(GetComponent<StateController>().targetForChaseOrAttack.transform);  //поворот к цели во время атаки
         }
     }
+    #endregion
+
+    #region PrimaryAttributes
+    [Space(1, order = 0)]
+    [Header("Primary Attributes", order = 1)]
+    [Space(4, order = 2)]
+    public CharacterStat Strength;
+    public CharacterStat Agility;
+    public CharacterStat Intelligence;
+    public CharacterStat Spirit;
+    public CharacterStat Vitality;
+    #endregion
+
+    #region AttributePoints
+    [Space(1, order = 0)]
+    [Header("AttributePoints", order = 1)]
+    [Space(4, order = 2)]
+    public float skillPointsValue;
+    #endregion
+
+    #region SecondaryAttributes
+    [Space(1, order = 0)]
+    [Header("AttributePoints", order = 1)]
+    [Space(4, order = 2)]
+    public CharacterStat AttackPower;
+    public CharacterStat BlockPower;
+    public CharacterStat AttackSpeed;
+    public CharacterStat MoveSpeed;
+    public CharacterStat Evasion;
+    public CharacterStat Mana;
+    public CharacterStat Energy;
+    public CharacterStat SpellPower;
+    public CharacterStat HealthRegeneration;
+    public CharacterStat ManaRegeneration;
+    public CharacterStat EnergyRegeneration;
+    public CharacterStat Health;
+    public CharacterStat Toxity;
     #endregion
 
     #region Dead

@@ -5,14 +5,14 @@ public class UnitOnMouseOver : MonoBehaviour
 {
     void OnMouseEnter()
     {
-        GameSettingsScript.healthBarEnemy.SetActive(true);
-        GameSettingsScript.healthBarEnemyScript.target = transform.root.gameObject;
-        GameSettingsScript.healthBarEnemyScript.SetTargetName();
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.SetActive(true);
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().target = transform.root.gameObject;
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().SetTargetName();
     }
 
     void OnMouseExit()
     {
-        GameSettingsScript.healthBarEnemyScript.target = null;
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().target = null;
         StartCoroutine(HideHitBar());
     }
 

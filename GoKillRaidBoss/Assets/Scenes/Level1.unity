@@ -2197,9 +2197,8 @@ GameObject:
   m_Component:
   - component: {fileID: 982603970}
   - component: {fileID: 982603969}
-  - component: {fileID: 982603971}
   m_Layer: 0
-  m_Name: GameSettings
+  m_Name: GameController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2216,6 +2215,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d8ddbc21f61c724f93dbd8217abec0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBarEnemy: {fileID: 1845663514}
+  menuCharacter: {fileID: 934516418}
 --- !u!4 &982603970
 Transform:
   m_ObjectHideFlags: 0
@@ -2229,18 +2230,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &982603971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 982603968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8724e69fbd54efe49a327c4609049245, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  menuCharacter: {fileID: 934516418}
 --- !u!1 &1082024150
 GameObject:
   m_ObjectHideFlags: 0
@@ -3327,6 +3316,11 @@ Prefab:
     - target: {fileID: 1818805187289610, guid: 6cb2e97e2eb7ace489b099982d4a2d77, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114032707295061736, guid: 6cb2e97e2eb7ace489b099982d4a2d77,
+        type: 2}
+      propertyPath: skillPointsValue
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cb2e97e2eb7ace489b099982d4a2d77, type: 2}

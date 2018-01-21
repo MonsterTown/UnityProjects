@@ -306,7 +306,6 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\FPS.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GameController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GameObjectTags.cs" />
-    <Compile Include="Assets\ApprovedAssets\Scripts\GameSettingsScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GetCurrentAnimatorClipInfoExample.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\HealthBarsScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\HitBoxScript.cs" />
@@ -446,7 +445,6 @@
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\TerrainNeighbours.cs" />
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\Third Party\Complex.cs" />
     <Compile Include="Assets\Terrain Stitch\Terrain Stitch Scripts\Third Party\Matrix.cs" />
-    <Compile Include="Assets\UIMenuController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ApprovedAssets\Fonts\Noto_Sans\LICENSE.txt" />
