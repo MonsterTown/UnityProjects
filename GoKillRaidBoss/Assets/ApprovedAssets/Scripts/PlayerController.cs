@@ -15,9 +15,17 @@ public class PlayerController : MonoBehaviour {
     void Update() {
 
         animator.ResetTrigger("Attack");
-        if (Input.GetMouseButton(0)) {
-            animator.SetTrigger("Attack"); 
+
+        //For PC
+        // if (Input.GetMouseButton(0)) {
+        //     animator.SetTrigger("Attack"); 
+        // }
+
+        //For Android
+        if (Input.GetMouseButtonDown(0)) {
+            animator.SetTrigger("Attack");
         }
+
 
         if (Input.GetKeyDown(KeyCode.Space)) {
 
