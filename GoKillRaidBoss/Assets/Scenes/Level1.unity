@@ -3387,6 +3387,10 @@ Prefab:
       propertyPath: skillPointsValue
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 1878075617540284, guid: 6cb2e97e2eb7ace489b099982d4a2d77, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cb2e97e2eb7ace489b099982d4a2d77, type: 2}
   m_IsPrefabParent: 0

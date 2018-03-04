@@ -21,7 +21,7 @@ public class FPS : MonoBehaviour
     {
         i++;
         timer += Time.deltaTime;
-        if (timer >= 0.2f)
+        if (timer >= 1f)
         {
             fps = i * (1 / timer);
             timer = 0f;
