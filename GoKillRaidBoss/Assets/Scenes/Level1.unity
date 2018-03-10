@@ -1676,13 +1676,13 @@ Terrain:
   m_DetailObjectDistance: 80
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
+  m_SplatMapDistance: 100
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_DrawHeightmap: 1
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialType: 0
+  m_MaterialType: 1
   m_LegacySpecular:
     serializedVersion: 2
     rgba: 4286545791
@@ -2069,11 +2069,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4547468234967072, guid: a7360b00bcafc1448bbeb47b832a79af, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4547468234967072, guid: a7360b00bcafc1448bbeb47b832a79af, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4547468234967072, guid: a7360b00bcafc1448bbeb47b832a79af, type: 2}
       propertyPath: m_LocalPosition.z
