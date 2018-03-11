@@ -328,6 +328,9 @@
   <ItemGroup>
     <None Include="Assets\ApprovedAssets\Fonts\Noto_Sans\LICENSE.txt" />
     <None Include="Assets\ApprovedAssets\Fonts\Nunito\OFL.txt" />
+    <None Include="Assets\ApprovedAssets\Models\Knight\shaders\clothshader.shader" />
+    <None Include="Assets\ApprovedAssets\Models\Knight\shaders\particledistort.shader" />
+    <None Include="Assets\ApprovedAssets\Models\Knight\shaders\reflectAdd.shader" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.cginc" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\NavmeshOutline.shader" />

@@ -21,12 +21,14 @@ public class PlayerController : MonoBehaviour {
         //     animator.SetTrigger("Attack"); 
         // }
 
-        //For Android
+        PlayerMobileController();
+    }
+
+    //For Android
+    private void PlayerMobileController() {
         if (Input.GetMouseButtonDown(0)) {
             animator.SetTrigger("Attack");
         }
-
-
         if (Input.GetKeyDown(KeyCode.Space)) {
 
         }

@@ -9,7 +9,6 @@ public class GameController : MonoBehaviour {
     public GameObject menuCharacter;
 
     void Awake () {
-        Application.targetFrameRate = 60; //60 fps
         instance = this.gameObject; //Ссылка на обьект GameSettings статическая
     }
 

@@ -48,6 +48,7 @@ public class StateController : MonoBehaviour {
         currentState.UpdateState(this);
     }
 
+
     void OnDrawGizmos() {
         if (currentState != null && eyes != null) {
             Gizmos.color = currentState.sceneGizmoColor;

@@ -11,6 +11,10 @@ public class FPS : MonoBehaviour
     GUIStyle style = new GUIStyle();
     int fontSize = 20;
 
+    void Awake() {
+        Application.targetFrameRate = 600; //Fps max for Android
+    }
+
     void Start()
     {
         //style.fontSize = 10;

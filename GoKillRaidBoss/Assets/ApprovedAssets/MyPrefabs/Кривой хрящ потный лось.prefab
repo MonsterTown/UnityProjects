@@ -1225,7 +1225,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443546084970044}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -182.48253, y: 0, z: -209.71}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4427591469767676}
@@ -2299,6 +2299,43 @@ MonoBehaviour:
   attackTarget: {fileID: 0}
   armor: 10
   attackers: []
+  Strength:
+    BaseValue: 0
+  Agility:
+    BaseValue: 0
+  Intelligence:
+    BaseValue: 0
+  Spirit:
+    BaseValue: 0
+  Vitality:
+    BaseValue: 0
+  skillPointsValue: 0
+  AttackPower:
+    BaseValue: 0
+  BlockPower:
+    BaseValue: 0
+  AttackSpeed:
+    BaseValue: 0
+  MoveSpeed:
+    BaseValue: 0
+  Evasion:
+    BaseValue: 0
+  Mana:
+    BaseValue: 0
+  Energy:
+    BaseValue: 0
+  SpellPower:
+    BaseValue: 0
+  HealthRegeneration:
+    BaseValue: 0
+  ManaRegeneration:
+    BaseValue: 0
+  EnergyRegeneration:
+    BaseValue: 0
+  Health:
+    BaseValue: 0
+  Toxity:
+    BaseValue: 0
 --- !u!114 &114643807713879746
 MonoBehaviour:
   m_ObjectHideFlags: 1
