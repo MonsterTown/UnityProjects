@@ -13,6 +13,7 @@ public class FPS : MonoBehaviour
 
     void Awake() {
         Application.targetFrameRate = 600; //Fps max for Android
+      //  Time.timeScale = 0.2F;
     }
 
     void Start()

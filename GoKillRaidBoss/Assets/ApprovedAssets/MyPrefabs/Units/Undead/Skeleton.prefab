@@ -1909,7 +1909,7 @@ Transform:
   - {fileID: 4288721155300196}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -128.15, z: 0}
 --- !u!4 &4636436948851904
 Transform:
   m_ObjectHideFlags: 1
@@ -2691,8 +2691,8 @@ MonoBehaviour:
   hitBox: {fileID: 1121656913216070}
   deadScript: {fileID: 11400000, guid: d10597f4726c1ff4c93acbbc4f2589fd, type: 2}
   attackScript: {fileID: 11400000, guid: 606de02e5b0a9df4bb7533123c44b8b5, type: 2}
-  healthCur: 50
-  healthMax: 50
+  healthCur: 500
+  healthMax: 500
   healthRegen: 1
   regenOn: 1
   lookRange: 30
@@ -2756,7 +2756,7 @@ MonoBehaviour:
   repathRate: 0.5
   canSearch: 1
   canMove: 1
-  maxSpeed: 5
+  maxSpeed: 3
   gravity: {x: NaN, y: NaN, z: NaN}
   groundMask:
     serializedVersion: 2
@@ -2785,21 +2785,24 @@ MonoBehaviour:
   audioController: {fileID: 0}
   audioSource: {fileID: 82606901068083986}
   attackSounds:
-  - {fileID: 8300000, guid: 0c7ec32f0ca494a4ea41d8313bd06c2f, type: 3}
-  - {fileID: 8300000, guid: 6946471d34a9e854f8f3f124f13dd974, type: 3}
-  - {fileID: 8300000, guid: 22b849f6defb4d24497e1d47feb76748, type: 3}
-  - {fileID: 8300000, guid: 0f0a03349eea1994f9ac1598f59499ae, type: 3}
-  - {fileID: 8300000, guid: 9f9b899b8fc8b9246a82d7f9b8435583, type: 3}
+  - {fileID: 8300000, guid: 7dd3eb2e4ce13e842b428ad3309d875b, type: 3}
+  - {fileID: 8300000, guid: 1fc5a3523d37d944ea41283b9666fe5b, type: 3}
+  - {fileID: 8300000, guid: e11ea650d5b98f642b3515712606332b, type: 3}
+  - {fileID: 8300000, guid: cccce8e33140b6948a2be8ca65a6bdcf, type: 3}
   hitSounds:
-  - {fileID: 8300000, guid: 8ae5ba0ec8fecd748ac69fa7e560db9e, type: 3}
-  - {fileID: 8300000, guid: 7585a3e3526b29b4a85ace102defd36d, type: 3}
-  - {fileID: 8300000, guid: 22e5cd5b3772f8e49854e8fa2ffbd391, type: 3}
-  - {fileID: 8300000, guid: d57d68dda93a5a14b936508c9db0f5df, type: 3}
-  - {fileID: 8300000, guid: e26897dde16fbaf489b8c0ecfe8c7b95, type: 3}
-  - {fileID: 8300000, guid: 9c292f3e06135e44889aa29978d2509f, type: 3}
+  - {fileID: 8300000, guid: 9a8ce1427a8c5dc40ab7920379bcdd3d, type: 3}
+  - {fileID: 8300000, guid: d35dad86284ee1d4cb21d5fb383980a0, type: 3}
+  - {fileID: 8300000, guid: 9d21449051a20774287b627ab0890c24, type: 3}
+  - {fileID: 8300000, guid: 52f8cb468c809d341a7246fd7f66f857, type: 3}
+  - {fileID: 8300000, guid: 6120e6c11c02f004db95835ee490afe0, type: 3}
+  - {fileID: 8300000, guid: b7f97d73c7dd1bc4690dcd58664c6270, type: 3}
+  - {fileID: 8300000, guid: 61c7e0e894f3dbc498b604302a37e63a, type: 3}
   deathSounds:
-  - {fileID: 8300000, guid: a2f70081ca654a24f87fccc49d72b6fa, type: 3}
-  - {fileID: 8300000, guid: 0dbf7e66d87513842a01f2f14ed87e74, type: 3}
+  - {fileID: 8300000, guid: 2ec1cbc2cab51f145b1e9561d06e373f, type: 3}
+  - {fileID: 8300000, guid: e8a68e9b430d99344b766517d4b79100, type: 3}
+  - {fileID: 8300000, guid: 041a265d99b1afa4d94420537094dfb1, type: 3}
+  - {fileID: 8300000, guid: 9f9f523d2d1fb784e9662f0446116678, type: 3}
+  - {fileID: 8300000, guid: 0dc1f9a2ef9a1e14b81d3725dbbcd935, type: 3}
 --- !u!114 &114652140444814200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2924,8 +2927,8 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
-  m_Radius: 0.25
-  m_Height: 1.46
+  m_Radius: 0.3
+  m_Height: 1.5
   m_Direction: 1
   m_Center: {x: 0, y: -0.05, z: 0}
 --- !u!136 &136997384847765322

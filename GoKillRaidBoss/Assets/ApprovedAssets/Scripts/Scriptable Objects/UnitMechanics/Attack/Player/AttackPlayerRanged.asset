@@ -11,6 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2abd4d9cf4f88904eac9888252dbcd92, type: 3}
   m_Name: AttackPlayerRanged
   m_EditorClassIdentifier: 
+  targetAttack: {fileID: 0}
   rocket: {fileID: 54743019859436654, guid: b6cc587150db9374ba5dc09791dba745, type: 2}
   onImpactEffect: {fileID: 1462014133822804, guid: 902cf6a70703d074b95ebc002b799ff6,
     type: 2}

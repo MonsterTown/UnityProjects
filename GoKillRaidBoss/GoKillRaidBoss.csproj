@@ -311,6 +311,7 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\HealthBarsScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\HitBoxScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\MobileController.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\MobileControllerAttack.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Projectile\ProjectileScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\Action.cs" />
