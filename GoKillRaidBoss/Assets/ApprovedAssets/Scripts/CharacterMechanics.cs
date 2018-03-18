@@ -20,6 +20,9 @@ public class CharacterMechanics : MonoBehaviour {
     private Animator ch_animator;
     private MobileController mContr;
 
+    //Приказы
+    public bool doDive = false;
+
     private void Start() {
         ch_controller = GetComponent<CharacterController>();
         ch_animator = GetComponent<Animator>();
@@ -108,8 +111,9 @@ public class CharacterMechanics : MonoBehaviour {
 
     public void Dive() {
         ch_animator.ResetTrigger("Dive");
-        if (Input.GetKeyDown(KeyCode.Space) && ch_controller.isGrounded) {
+        if (doDive && ch_controller.isGrounded) {
             ch_animator.SetTrigger("Dive");
+            doDive = false;
         }
 
         if (isDive) {

@@ -1,42 +1,75 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour {
 
     UnitStats unitStats;
     Animator animator;
+    
+    CharacterMechanics characterMechanics;
+
+    //Инициализация перемененных для кнопок
     public MobileControllerAttack guiAttackButton;
+    public MobileControllerRoll guiRollButton;
+    public MobileControllerCharacterMenuButton guiMenuButton;
+
+    //Для отслеживания мыши над гуи элементами.
+    public GraphicRaycaster gr;
+    PointerEventData ped = new PointerEventData(null);
+    public List<RaycastResult> results = new List<RaycastResult>();
+    bool mouseOverGUI;
 
 
     private void Awake() {
         unitStats = GetComponent<UnitStats>();
         animator = GetComponent<Animator>();
+        characterMechanics = GetComponent<CharacterMechanics>();
+        gr = gr.GetComponent<GraphicRaycaster>();
     }
 
     void Update() {
-
         animator.ResetTrigger("Attack");
-
         PlayerMobileController();
     }
 
     //For Android
+
     private void PlayerMobileController() {
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        UpdateMouseOverGUI();
 
+        if (Input.GetKeyDown(KeyCode.Space) || guiRollButton.input ) {  //Приказ на кувырок
+            characterMechanics.doDive = true;
         }
 
         if (guiAttackButton.input) {
             OrderAttackFromButton();
             animator.SetTrigger("Attack");
-        }
-        else if(Input.GetMouseButtonDown(0)) {
+        } else if (Input.GetMouseButtonDown(0) && !mouseOverGUI ){
             GetComponent<UnitStats>().attackScript.targetAttack = null;
             OrderAttackFromDisplayClick();
-            animator.SetTrigger("Attack");
+            animator.SetTrigger("Attack");           
         }
+
+        mouseOverGUI = false;
+    }
+
+
+
+    public void UpdateMouseOverGUI() {
+        ped.position = Input.mousePosition;
+        gr.Raycast(ped, results);
+        foreach (RaycastResult o in results) {
+            if (o.gameObject.name == guiRollButton.name ||
+                o.gameObject.name == guiMenuButton.name) {
+                mouseOverGUI = true;
+                break;
+            }
+        }
+        results.Clear();
     }
 
     public void OrderAttackFromDisplayClick() {
@@ -57,6 +90,10 @@ public class PlayerController : MonoBehaviour {
 
         GameObject target = NearestTarget(gameObject, 30);
         GetComponent<UnitStats>().attackScript.targetAttack = target;
+
+        if (target) {
+            SetHealthBarEnemy(target);
+        }
     }
 
     private GameObject NearestTarget(GameObject player, float distance) {  //Нахождения ближайшего врага в радиусе
@@ -89,5 +126,12 @@ public class PlayerController : MonoBehaviour {
             i++;
         }   
         return nearestTarget;
+    }
+
+    public void SetHealthBarEnemy(GameObject target) {
+
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.SetActive(true);
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().target = target;
+        GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().SetTargetName();
     }
 }

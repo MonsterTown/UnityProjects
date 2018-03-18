@@ -15,7 +15,7 @@ public class ProjectileScript : MonoBehaviour {
 
     public void OnImpact(GameObject targetHit)  //Вызывается при попадании в хитбокс с триггер коллайдером.
     {
-        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+        Vector3 pos = new Vector3(transform.position.x, transform.position.y, transform.position.z) + (transform.forward * -1f);
         GameObject gameEffect = Instantiate(onImpactEffect, pos, transform.rotation);
         Destroy(gameEffect, 2);
         Destroy(gameObject);
