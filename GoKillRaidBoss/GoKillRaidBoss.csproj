@@ -308,8 +308,11 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AudioController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerAttack.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerCharacterMenuAbilityTab.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerCharacterMenuButton.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerCharacterMenuButtonClose.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerCharacterMenuInventoryTab.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerCharacterMenuPlayerTab.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Buttons\MobileControllerRoll.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\CharacterMechanics.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\FPS.cs" />
@@ -532,6 +535,7 @@
     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
     <None Include="Assets\AstarPathfindingProject\link.xml" />
+    <None Include="Assets\AutoSave\ReadMe.txt" />
     <None Include="Assets\BEP3\BEP_3_Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\BEP3\BEP_3_Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\BlurEffectConeTaps.shader" />
     <None Include="Assets\BEP3\BEP_3_Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
