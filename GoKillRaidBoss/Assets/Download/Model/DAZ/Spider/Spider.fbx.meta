@@ -1,0 +1,304 @@
+fileFormatVersion: 2
+guid: 0080544b97808894f9a7c426231a0cc1
+timeCreated: 1524298803
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: abdomen_1 spider
+    100002: abdomen_2 spider
+    100004: abdomen_3 spider
+    100006: cephalothorax spider
+    100008: Giant Monster Spider HD
+    100010: Giant Monster Spider HD.Shape
+    100012: l_claw_1 spider
+    100014: l_claw_2 spider
+    100016: l_claw_3 spider
+    100018: l_claw_4 spider
+    100020: l_coxa_1 spider
+    100022: l_coxa_2 spider
+    100024: l_coxa_3 spider
+    100026: l_coxa_4 spider
+    100028: l_fang spider
+    100030: l_femur_1 spider
+    100032: l_femur_2 spider
+    100034: l_femur_3 spider
+    100036: l_femur_4 spider
+    100038: l_jaw spider
+    100040: l_knee_1 spider
+    100042: l_knee_2 spider
+    100044: l_knee_3 spider
+    100046: l_knee_4 spider
+    100048: l_maxilla spider
+    100050: l_metatarsus_1 spider
+    100052: l_metatarsus_2 spider
+    100054: l_metatarsus_3 spider
+    100056: l_metatarsus_4 spider
+    100058: l_palp_1 spider
+    100060: l_palp_2 spider
+    100062: l_palp_3 spider
+    100064: l_palp_4 spider
+    100066: l_tarsus_1 spider
+    100068: l_tarsus_2 spider
+    100070: l_tarsus_3 spider
+    100072: l_tarsus_4 spider
+    100074: l_tibia_1 spider
+    100076: l_tibia_2 spider
+    100078: l_tibia_3 spider
+    100080: l_tibia_4 spider
+    100082: l_trochanter_1 spider
+    100084: l_trochanter_2 spider
+    100086: l_trochanter_3 spider
+    100088: l_trochanter_4 spider
+    100090: pedicel spider
+    100092: r_claw_1 spider
+    100094: r_claw_2 spider
+    100096: r_claw_3 spider
+    100098: r_claw_4 spider
+    100100: r_coxa_1 spider
+    100102: r_coxa_2 spider
+    100104: r_coxa_3 spider
+    100106: r_coxa_4 spider
+    100108: r_fang spider
+    100110: r_femur_1 spider
+    100112: r_femur_2 spider
+    100114: r_femur_3 spider
+    100116: r_femur_4 spider
+    100118: r_jaw spider
+    100120: r_knee_1 spider
+    100122: r_knee_2 spider
+    100124: r_knee_3 spider
+    100126: r_knee_4 spider
+    100128: r_maxilla spider
+    100130: r_metatarsus_1 spider
+    100132: r_metatarsus_2 spider
+    100134: r_metatarsus_3 spider
+    100136: r_metatarsus_4 spider
+    100138: r_palp_1 spider
+    100140: r_palp_2 spider
+    100142: r_palp_3 spider
+    100144: r_palp_4 spider
+    100146: r_tarsus_1 spider
+    100148: r_tarsus_2 spider
+    100150: r_tarsus_3 spider
+    100152: r_tarsus_4 spider
+    100154: r_tibia_1 spider
+    100156: r_tibia_2 spider
+    100158: r_tibia_3 spider
+    100160: r_tibia_4 spider
+    100162: r_trochanter_1 spider
+    100164: r_trochanter_2 spider
+    100166: r_trochanter_3 spider
+    100168: r_trochanter_4 spider
+    100170: //RootNode
+    100172: Spider_hairs_final_001a_47136.Shape
+    400000: abdomen_1 spider
+    400002: abdomen_2 spider
+    400004: abdomen_3 spider
+    400006: cephalothorax spider
+    400008: Giant Monster Spider HD
+    400010: Giant Monster Spider HD.Shape
+    400012: l_claw_1 spider
+    400014: l_claw_2 spider
+    400016: l_claw_3 spider
+    400018: l_claw_4 spider
+    400020: l_coxa_1 spider
+    400022: l_coxa_2 spider
+    400024: l_coxa_3 spider
+    400026: l_coxa_4 spider
+    400028: l_fang spider
+    400030: l_femur_1 spider
+    400032: l_femur_2 spider
+    400034: l_femur_3 spider
+    400036: l_femur_4 spider
+    400038: l_jaw spider
+    400040: l_knee_1 spider
+    400042: l_knee_2 spider
+    400044: l_knee_3 spider
+    400046: l_knee_4 spider
+    400048: l_maxilla spider
+    400050: l_metatarsus_1 spider
+    400052: l_metatarsus_2 spider
+    400054: l_metatarsus_3 spider
+    400056: l_metatarsus_4 spider
+    400058: l_palp_1 spider
+    400060: l_palp_2 spider
+    400062: l_palp_3 spider
+    400064: l_palp_4 spider
+    400066: l_tarsus_1 spider
+    400068: l_tarsus_2 spider
+    400070: l_tarsus_3 spider
+    400072: l_tarsus_4 spider
+    400074: l_tibia_1 spider
+    400076: l_tibia_2 spider
+    400078: l_tibia_3 spider
+    400080: l_tibia_4 spider
+    400082: l_trochanter_1 spider
+    400084: l_trochanter_2 spider
+    400086: l_trochanter_3 spider
+    400088: l_trochanter_4 spider
+    400090: pedicel spider
+    400092: r_claw_1 spider
+    400094: r_claw_2 spider
+    400096: r_claw_3 spider
+    400098: r_claw_4 spider
+    400100: r_coxa_1 spider
+    400102: r_coxa_2 spider
+    400104: r_coxa_3 spider
+    400106: r_coxa_4 spider
+    400108: r_fang spider
+    400110: r_femur_1 spider
+    400112: r_femur_2 spider
+    400114: r_femur_3 spider
+    400116: r_femur_4 spider
+    400118: r_jaw spider
+    400120: r_knee_1 spider
+    400122: r_knee_2 spider
+    400124: r_knee_3 spider
+    400126: r_knee_4 spider
+    400128: r_maxilla spider
+    400130: r_metatarsus_1 spider
+    400132: r_metatarsus_2 spider
+    400134: r_metatarsus_3 spider
+    400136: r_metatarsus_4 spider
+    400138: r_palp_1 spider
+    400140: r_palp_2 spider
+    400142: r_palp_3 spider
+    400144: r_palp_4 spider
+    400146: r_tarsus_1 spider
+    400148: r_tarsus_2 spider
+    400150: r_tarsus_3 spider
+    400152: r_tarsus_4 spider
+    400154: r_tibia_1 spider
+    400156: r_tibia_2 spider
+    400158: r_tibia_3 spider
+    400160: r_tibia_4 spider
+    400162: r_trochanter_1 spider
+    400164: r_trochanter_2 spider
+    400166: r_trochanter_3 spider
+    400168: r_trochanter_4 spider
+    400170: //RootNode
+    400172: Spider_hairs_final_001a_47136.Shape
+    2100000: left_legs
+    2100002: head
+    2100004: abdomen
+    2100006: right_legs
+    2100008: eyes
+    2100010: defaultMat
+    4300000: Giant Monster Spider HD.Shape
+    4300002: Spider_hairs_final_001a_47136.Shape
+    7400000: Animation
+    9500000: //RootNode
+    13700000: Giant Monster Spider HD.Shape
+    13700002: Spider_hairs_final_001a_47136.Shape
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: abdomen
+    second: {fileID: 2100000, guid: 452fa8952853e1548899030f49780411, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: defaultMat
+    second: {fileID: 2100000, guid: 1a9a14774b9a7de4f95cd658483917d2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eyes
+    second: {fileID: 2100000, guid: 4fdd4ff3bcb5c774987052db8db4fa40, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: head
+    second: {fileID: 2100000, guid: 305882c303df0e1458f566578583c8f8, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: left_legs
+    second: {fileID: 2100000, guid: 289d65f6ea90fdc46b54b5a3636bdf2b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: right_legs
+    second: {fileID: 2100000, guid: 26f33927d559d5445be9ba00b4f89687, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 1
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {fileID: 9000000, guid: 3b2abbf796e43b449ab98d7b2911cd1f,
+    type: 3}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

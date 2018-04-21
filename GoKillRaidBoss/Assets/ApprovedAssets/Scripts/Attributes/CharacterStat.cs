@@ -21,7 +21,7 @@ namespace Kryz.CharacterStats
 					_value = CalculateFinalValue();
 					isDirty = false;
 				}
-				return _value;
+                return _value;
 			}
 		}
 
@@ -32,7 +32,7 @@ namespace Kryz.CharacterStats
 		{
 			statModifiers = new List<StatModifier>();
 			StatModifiers = statModifiers.AsReadOnly();
-		}
+        }
 
 		public CharacterStat(float baseValue) : this()
 		{
@@ -108,8 +108,8 @@ namespace Kryz.CharacterStats
 				{
 					finalValue *= 1 + mod.Value;
 				}
-			}
+			}      
             return (float)Math.Round(finalValue, 4);
-		}   
-	}
+		}
+    }
 }

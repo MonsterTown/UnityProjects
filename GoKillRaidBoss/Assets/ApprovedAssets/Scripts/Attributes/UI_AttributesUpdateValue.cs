@@ -1,4 +1,6 @@
-﻿using System.Collections;
+﻿using Kryz.CharacterStats;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -32,6 +34,25 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
     public Text healthValue;
     public Text toxityValue;
 
+    void Start() {
+        StartCoroutine(Rewrite()); //Старт регенерации хитов, маны и усталости.
+    }
+
+    IEnumerator Rewrite() {
+        while (true) {
+            strengthValue.text = player.GetComponent<UnitStats>().Strength.Value.ToString();
+            agilityValue.text = player.GetComponent<UnitStats>().Agility.Value.ToString();
+            intelligenceValue.text = player.GetComponent<UnitStats>().Intelligence.Value.ToString();
+            spiritValue.text = player.GetComponent<UnitStats>().Spirit.Value.ToString();
+            vitalityValue.text = player.GetComponent<UnitStats>().Vitality.Value.ToString();
+
+            skillPointsValue.text = player.GetComponent<UnitStats>().skillPointsValue.ToString();
+
+            yield return new WaitForSeconds(0.05f);
+        }
+    }
+
+    /*
     void Update() {
         strengthValue.text = player.GetComponent<UnitStats>().Strength.Value.ToString();
         agilityValue.text = player.GetComponent<UnitStats>().Agility.Value.ToString();
@@ -55,4 +76,5 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
         healthValue.text = player.GetComponent<UnitStats>().Health.Value.ToString();
         toxityValue.text = player.GetComponent<UnitStats>().Toxity.Value.ToString();
     }
+    */
 }
