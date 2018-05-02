@@ -302,6 +302,7 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\Animator\AnimatorDiveScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\CharacterStat.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\SkillPointsAdd.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\StatConverter.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\StatModifier.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\UI_AttributesUpdateValue.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Audio\AnimatorSounds.cs" />
@@ -321,6 +322,8 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\GetCurrentAnimatorClipInfoExample.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\HealthBarsScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\HitBoxScript.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\ObserverPattern\Observable.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\ObserverPattern\Observer.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Projectile\ProjectileScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Scriptable Objects\StateMachine\Action.cs" />

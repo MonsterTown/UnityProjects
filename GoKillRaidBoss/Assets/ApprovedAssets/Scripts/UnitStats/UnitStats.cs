@@ -84,7 +84,9 @@ public class UnitStats : MonoBehaviour {
     }
 
     void Start() {
-        StartCoroutine(Regeneration()); //Старт регенерации хитов, маны и усталости.
+        StartCoroutine(Regeneration()); //Старт регенерации хитов, маны и усталости
+
+        Strength.AddObserver(AttackPower); //Подписка по паттерну обсервер
     }
 
     #region Health/Mana/Concentration Regeneration

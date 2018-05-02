@@ -6,7 +6,7 @@ using UnityEngine;
 namespace Kryz.CharacterStats
 {
 	[Serializable]
-	public class CharacterStat
+	public class CharacterStat : Observer, Observable
 	{
 		public float BaseValue;
 
@@ -20,7 +20,9 @@ namespace Kryz.CharacterStats
 					lastBaseValue = BaseValue;
 					_value = CalculateFinalValue();
 					isDirty = false;
-				}
+                    Debug.Log("Stat change!");
+                    NotifyObservers();
+                }
                 return _value;
 			}
 		}
@@ -111,5 +113,27 @@ namespace Kryz.CharacterStats
 			}      
             return (float)Math.Round(finalValue, 4);
 		}
+
+        #region Observer and Observable realisation
+
+        private List<Observer> observers = new List<Observer>();
+
+        public void ObserverUpdate(object ob) {
+            Debug.Log("New info " + ob);
+        }
+
+        public void AddObserver(Observer o) {
+            observers.Add(o);
+        }
+
+        public void RemoveObserver(Observer o) {
+            observers.Remove(o);
+        }
+
+        public void NotifyObservers() {
+            foreach (Observer observer in observers)
+                observer.ObserverUpdate(_value);
+        }
+        #endregion
     }
 }
