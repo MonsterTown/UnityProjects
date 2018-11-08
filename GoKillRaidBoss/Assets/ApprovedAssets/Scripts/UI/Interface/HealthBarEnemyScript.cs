@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
+//Показывает полоску жизни врага если есть цель
 public class HealthBarEnemyScript : MonoBehaviour
 {
     private GameObject target;
@@ -20,7 +21,7 @@ public class HealthBarEnemyScript : MonoBehaviour
         DisplayBar();
     }
 
-    public void DisplayBar()
+    private void DisplayBar()
     {
         if (target != null)
         {

@@ -108,7 +108,7 @@ public class CharacterMechanics : MonoBehaviour {
         }
     }
 
-
+    //Кувырок
     public void Dive() {
         ch_animator.ResetTrigger("Dive");
         if (doDive && ch_controller.isGrounded) {

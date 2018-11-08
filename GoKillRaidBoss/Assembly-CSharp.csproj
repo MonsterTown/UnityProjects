@@ -56,7 +56,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ApprovedAssets\Models\Knight\scripts\rotator.cs" />
-    <Compile Include="Assets\ApprovedAssets\MyPrefabs\UI\HealthBarEnemy\HealthBarEnemyScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Animator\AnimatorDiveScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\CharacterStat.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Attributes\StatConverter.cs" />
@@ -103,10 +102,11 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\Buttons\MobileControllerCharacterMenuInventoryTab.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\Buttons\MobileControllerCharacterMenuPlayerTab.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\Buttons\MobileControllerRoll.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\UI\Interface\HealthBarEnemyScript.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\MenuCharacter\SkillPointsAdd.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\MenuCharacter\UI_AttributesUpdateValue.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitHelpers\UnitHelpers.cs" />
-    <Compile Include="Assets\ApprovedAssets\Scripts\UnitOnMouseOver.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitOnMouseOver.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UnitStats\UnitStats.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UpdateCamera.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs" />

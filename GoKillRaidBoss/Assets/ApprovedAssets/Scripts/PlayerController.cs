@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+//Класс принимающий управление персонажем
 public class PlayerController : MonoBehaviour {
 
     UnitStats unitStats;
@@ -35,7 +36,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     //For Android
-
     private void PlayerMobileController() {
 
         UpdateMouseOverGUI();
