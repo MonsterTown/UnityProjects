@@ -4,9 +4,7 @@ using UnityEngine.UI;
 
 public class HealthBarEnemyScript : MonoBehaviour
 {
-    public GameObject target;
-    public string targetName;
-
+    private GameObject target;
     private Text textField;
 
     float HealthCur;
@@ -18,6 +16,11 @@ public class HealthBarEnemyScript : MonoBehaviour
     }
 
     void Update()
+    {
+        DisplayBar();
+    }
+
+    public void DisplayBar()
     {
         if (target != null)
         {
@@ -31,8 +34,9 @@ public class HealthBarEnemyScript : MonoBehaviour
         }
     }
 
-    public void SetTargetName()
+    public void SetTarget(GameObject target)
     {
+        this.target = target;
         textField.text = target.name;
     }
 }
