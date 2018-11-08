@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 0080544b97808894f9a7c426231a0cc1
-timeCreated: 1524298803
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -191,6 +189,7 @@ ModelImporter:
     9500000: //RootNode
     13700000: Giant Monster Spider HD.Shape
     13700002: Spider_hairs_final_001a_47136.Shape
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -240,6 +239,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5

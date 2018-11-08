@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: c90158e63a626e645a6fcb1761cbc210
-timeCreated: 1524332686
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -375,22 +373,23 @@ ModelImporter:
     9500000: //RootNode
     13700000: Genesis8Male.Shape
     13700002: Genesis8MaleEyelashes.Shape
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Arms
-    second: {fileID: 2100000, guid: 54df74ddb6ec24a4695708a7d911bb9b, type: 2}
+    second: {fileID: 2100000, guid: aab07c8ac20b2d745acca35ed41b6829, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Cornea
-    second: {fileID: 2100000, guid: 5ace9221ea38dae45bd906d2581da1e9, type: 2}
+    second: {fileID: 2100000, guid: 4eeee85065c7c8f4da44f2adfd1aba25, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Ears
-    second: {fileID: 2100000, guid: 4edc790648fea7445befa98b3d92b4de, type: 2}
+    second: {fileID: 2100000, guid: f28d1543929a3854ba6d6e77deadae60, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -400,22 +399,22 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: EyeSocket
-    second: {fileID: 2100000, guid: 4edc790648fea7445befa98b3d92b4de, type: 2}
+    second: {fileID: 2100000, guid: dd03376ec9cac01499d05fcc8e54dccc, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Eyelashes
-    second: {fileID: 2100000, guid: 3bb7476504fd35e46bfbbb01c0258ef4, type: 2}
+    second: {fileID: 2100000, guid: eb9d13dcfcfb5b240a15a1e26eedc53c, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Face
-    second: {fileID: 2100000, guid: 4edc790648fea7445befa98b3d92b4de, type: 2}
+    second: {fileID: 2100000, guid: 349654d8a92160542bee2081a49c3600, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Fingernails
-    second: {fileID: 2100000, guid: 54df74ddb6ec24a4695708a7d911bb9b, type: 2}
+    second: {fileID: 2100000, guid: a20fceb33ece55249bbd357694eb5a19, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -425,17 +424,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Legs
-    second: {fileID: 2100000, guid: 8f33cd36af586124ca99e8ca90bc1536, type: 2}
+    second: {fileID: 2100000, guid: 847fb7ed230402649939d1a21b9b4ff0, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Lips
-    second: {fileID: 2100000, guid: 4edc790648fea7445befa98b3d92b4de, type: 2}
+    second: {fileID: 2100000, guid: 84def85b77020df43959c6a590f8ee0d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mouth
-    second: {fileID: 2100000, guid: a204df903788d2041af68d6f72992985, type: 2}
+    second: {fileID: 2100000, guid: 89105f2eec44d2047a7b9c888191a738, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -450,17 +449,17 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Teeth
-    second: {fileID: 2100000, guid: a204df903788d2041af68d6f72992985, type: 2}
+    second: {fileID: 2100000, guid: ef061f3d5a9408746aa9e7f1191808ce, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Toenails
-    second: {fileID: 2100000, guid: 8f33cd36af586124ca99e8ca90bc1536, type: 2}
+    second: {fileID: 2100000, guid: f47662c3d893fc6448cec9e89fc83d0d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Torso
-    second: {fileID: 2100000, guid: d87ba4161ba443a489df197dd8644ed7, type: 2}
+    second: {fileID: 2100000, guid: f4590a7e682898d4580342b94a3b13d6, type: 2}
   materials:
     importMaterials: 1
     materialName: 1
@@ -479,6 +478,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

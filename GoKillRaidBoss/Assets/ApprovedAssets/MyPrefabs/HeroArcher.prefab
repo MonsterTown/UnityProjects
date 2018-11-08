@@ -1022,6 +1022,7 @@ GameObject:
   - component: {fileID: 114050202636961714}
   - component: {fileID: 114281427915554646}
   - component: {fileID: 114032707295061736}
+  - component: {fileID: 114518435003302546}
   m_Layer: 0
   m_Name: HeroArcher
   m_TagString: Player
@@ -1724,7 +1725,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1878075617540284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 118.94, y: 1.12, z: 126.35}
+  m_LocalPosition: {x: 54.31, y: 5.68, z: 51.92}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4614497185214640}
@@ -2325,7 +2326,7 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
-    m_RotationOrder: 4
+    m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
@@ -2420,43 +2421,6 @@ MonoBehaviour:
   attackTarget: {fileID: 0}
   armor: 0
   attackers: []
-  Strength:
-    BaseValue: 0
-  Agility:
-    BaseValue: 0
-  Intelligence:
-    BaseValue: 0
-  Spirit:
-    BaseValue: 0
-  Vitality:
-    BaseValue: 0
-  skillPointsValue: 10
-  AttackPower:
-    BaseValue: 0
-  BlockPower:
-    BaseValue: 0
-  AttackSpeed:
-    BaseValue: 0
-  MoveSpeed:
-    BaseValue: 0
-  Evasion:
-    BaseValue: 0
-  Mana:
-    BaseValue: 0
-  Energy:
-    BaseValue: 0
-  SpellPower:
-    BaseValue: 0
-  HealthRegeneration:
-    BaseValue: 0
-  ManaRegeneration:
-    BaseValue: 0
-  EnergyRegeneration:
-    BaseValue: 0
-  Health:
-    BaseValue: 0
-  Toxity:
-    BaseValue: 0
 --- !u!114 &114050202636961714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2470,7 +2434,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   guiAttackButton: {fileID: 0}
   guiRollButton: {fileID: 0}
-  guiMenuButton: {fileID: 0}
   gr: {fileID: 0}
 --- !u!114 &114099932441778314
 MonoBehaviour:
@@ -2535,6 +2498,72 @@ MonoBehaviour:
   none: 0
   fraction: 0
   dead: 0
+--- !u!114 &114518435003302546
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1878075617540284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7d730ece772a442bb73e03f92e4118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Strength:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Agility:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Intelligence:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Spirit:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Vitality:
+    owner: {fileID: 0}
+    BaseValue: 0
+  skillPointsValue: 50
+  AttackPower:
+    owner: {fileID: 0}
+    BaseValue: 30
+  BlockPower:
+    owner: {fileID: 0}
+    BaseValue: 0
+  AttackSpeed:
+    owner: {fileID: 0}
+    BaseValue: 0
+  MoveSpeed:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Evasion:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Mana:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Energy:
+    owner: {fileID: 0}
+    BaseValue: 0
+  SpellPower:
+    owner: {fileID: 0}
+    BaseValue: 0
+  HealthRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 0
+  ManaRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 0
+  EnergyRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 0
+  Health:
+    owner: {fileID: 0}
+    BaseValue: 100
+  Toxity:
+    owner: {fileID: 0}
+    BaseValue: 0
 --- !u!137 &137157783154708602
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

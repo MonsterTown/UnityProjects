@@ -31,7 +31,7 @@ public class AttackPlayerRanged : AbstractAttack {
         RaycastHit hit;
         int layerMaskGround = LayerMask.GetMask("Default"); //Рейкаст только в слой  Default (только)
 
-        if (targetAttack) {
+        if (targetAttack) { //Если есть цель, эта переменная в родительском классе, а туда она пападает из PlayerControll
             Vector3 direct = new Vector3(targetAttack.transform.position.x, self.transform.position.y, targetAttack.transform.position.z);
             self.transform.LookAt(direct);
             self.transform.Rotate(Vector3.up * 0.5f);

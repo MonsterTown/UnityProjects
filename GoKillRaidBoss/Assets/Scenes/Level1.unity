@@ -14,7 +14,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 8
+  serializedVersion: 9
   m_Fog: 1
   m_FogColor: {r: 0, g: 0, b: 0, a: 1}
   m_FogMode: 3
@@ -40,6 +40,7 @@ RenderSettings:
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
   m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -55,11 +56,10 @@ LightmapSettings:
     m_EnableBakedLightmaps: 0
     m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
-    serializedVersion: 9
+    serializedVersion: 10
     m_Resolution: 2
     m_BakeResolution: 40
-    m_TextureWidth: 1024
-    m_TextureHeight: 1024
+    m_AtlasSize: 1024
     m_AO: 0
     m_AOMaxDistance: 1
     m_CompAOExponent: 1
@@ -438,7 +438,7 @@ GameObject:
   - component: {fileID: 74071583}
   - component: {fileID: 74071582}
   m_Layer: 10
-  m_Name: Armor
+  m_Name: SpellPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -497,9 +497,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Armor
-
-'
+  m_Text: Spell Power
 --- !u!222 &74071583
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -689,8 +687,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -244.04}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: -80, y: -399.2199}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &84958210
 MonoBehaviour:
@@ -724,7 +722,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Spirit
 
 '
@@ -1088,7 +1086,7 @@ GameObject:
   - component: {fileID: 127013276}
   - component: {fileID: 127013275}
   m_Layer: 10
-  m_Name: Attack Power
+  m_Name: AttackPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1169,7 +1167,7 @@ GameObject:
   - component: {fileID: 132839523}
   - component: {fileID: 132839522}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: ManaValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1427,7 +1425,7 @@ GameObject:
   - component: {fileID: 174503752}
   - component: {fileID: 174503751}
   m_Layer: 10
-  m_Name: Text
+  m_Name: SpellPowerValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1572,7 +1570,7 @@ GameObject:
   - component: {fileID: 187574266}
   - component: {fileID: 187574265}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: ManaRegenValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2046,7 +2044,7 @@ GameObject:
   - component: {fileID: 235881400}
   - component: {fileID: 235881399}
   m_Layer: 10
-  m_Name: Image (3)
+  m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2090,7 +2088,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 58eb895698544f84181afbf980f04509, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40a24bd374ea8bb4a9a2cc1a22c1f200, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2803,7 +2801,7 @@ GameObject:
   - component: {fileID: 312369833}
   - component: {fileID: 312369832}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: ToxityValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3393,7 +3391,7 @@ GameObject:
   - component: {fileID: 374571942}
   - component: {fileID: 374571941}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: EnergyRegenValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3475,7 +3473,7 @@ GameObject:
   - component: {fileID: 392605929}
   - component: {fileID: 392605928}
   m_Layer: 10
-  m_Name: 'Attack Speed '
+  m_Name: 'AttackSpeed '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3993,6 +3991,84 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 435878040}
+--- !u!1 &436947580
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1739510111213098, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 436947581}
+  - component: {fileID: 436947583}
+  - component: {fileID: 436947582}
+  m_Layer: 10
+  m_Name: HealEffectivValue
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &436947581
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224688505324475384, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436947580}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 989173181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 500, y: 0}
+  m_SizeDelta: {x: 160, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &436947582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114971043808468112, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436947580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.8980392, g: 0.74509805, b: 0.105882354, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 04c90ef3f5d110942a7dc36c1cba2fd8, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 200
+    m_Alignment: 5
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 85
+--- !u!222 &436947583
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222774657237292208, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 436947580}
 --- !u!1 &454868873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4267,8 +4343,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.82, y: -763}
-  m_SizeDelta: {x: 231.6, y: 324.5}
+  m_AnchoredPosition: {x: 115.82, y: -956.4}
+  m_SizeDelta: {x: 231.6, y: 258.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &500464808
 MonoBehaviour:
@@ -4476,8 +4552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &530502979
 MonoBehaviour:
@@ -4603,54 +4679,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -5212,7 +5303,7 @@ GameObject:
   - component: {fileID: 600384180}
   - component: {fileID: 600384179}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: EnergyValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5599,7 +5690,7 @@ GameObject:
   - component: {fileID: 659037139}
   - component: {fileID: 659037138}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: EvasionValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5700,8 +5791,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &662018566
 MonoBehaviour:
@@ -5827,54 +5918,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -6273,7 +6379,7 @@ GameObject:
   - component: {fileID: 709017456}
   - component: {fileID: 709017455}
   m_Layer: 10
-  m_Name: Block
+  m_Name: Mana
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6332,9 +6438,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Block
-
-'
+  m_Text: Mana
 --- !u!222 &709017456
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6354,7 +6458,7 @@ GameObject:
   - component: {fileID: 736297387}
   - component: {fileID: 736297386}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: BlockValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6451,11 +6555,11 @@ RectTransform:
   m_Children:
   - {fileID: 312369831}
   m_Father: {fileID: 1377615117}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -294.04}
+  m_AnchoredPosition: {x: -80, y: -344.04}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &739319073
@@ -7156,7 +7260,7 @@ GameObject:
   - component: {fileID: 829161905}
   - component: {fileID: 829161904}
   m_Layer: 10
-  m_Name: Text
+  m_Name: AttackPowerValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7632,7 +7736,7 @@ GameObject:
   - component: {fileID: 910089862}
   - component: {fileID: 910089861}
   m_Layer: 10
-  m_Name: Mana Regeneration
+  m_Name: EnergyRegen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7691,7 +7795,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Mana Regeneration
+  m_Text: 'Energy Regeneration
 
 
 '
@@ -7811,8 +7915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &920085954
 MonoBehaviour:
@@ -7938,54 +8042,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -8098,7 +8217,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -80, y: -94.04199}
-  m_SizeDelta: {x: 160, y: 50}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928178623
 MonoBehaviour:
@@ -8132,7 +8251,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Strength
 
 '
@@ -8179,8 +8298,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -294.04}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: -80, y: -499.22}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &928887086
 MonoBehaviour:
@@ -8214,7 +8333,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Vitality
 
 '
@@ -8800,19 +8919,24 @@ MonoBehaviour:
   spiritValue: {fileID: 542404745}
   vitalityValue: {fileID: 1483249529}
   skillPointsValue: {fileID: 1222994749}
-  attackPowerValue: {fileID: 0}
-  blockPowerValue: {fileID: 0}
-  attackSpeedValue: {fileID: 0}
-  moveSpeedValue: {fileID: 0}
-  evasionValue: {fileID: 0}
-  spellPowerValue: {fileID: 0}
-  manaValue: {fileID: 0}
-  energyValue: {fileID: 0}
-  healthRegenValue: {fileID: 0}
-  manaRegenValue: {fileID: 0}
-  energyRegenValue: {fileID: 0}
-  healthValue: {fileID: 0}
-  toxityValue: {fileID: 0}
+  attackPowerValue: {fileID: 1420259251}
+  blockPowerValue: {fileID: 736297386}
+  attackSpeedValue: {fileID: 2027992197}
+  moveSpeedValue: {fileID: 1804966691}
+  evasionValue: {fileID: 659037138}
+  spellPowerValue: {fileID: 1353262159}
+  manaValue: {fileID: 132839522}
+  energyValue: {fileID: 600384179}
+  healthRegenValue: {fileID: 1015076203}
+  manaRegenValue: {fileID: 187574265}
+  energyRegenValue: {fileID: 374571941}
+  healthEffectivValue: {fileID: 436947582}
+  healthValue: {fileID: 1027532782}
+  toxityValue: {fileID: 312369832}
+  quickHealth: {fileID: 1075133036}
+  quickAttackPower: {fileID: 829161904}
+  quickSpellPower: {fileID: 174503751}
+  quickMana: {fileID: 0}
 --- !u!114 &982603973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9025,6 +9149,85 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 988416694}
+--- !u!1 &989173180
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 1386788432459160, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 989173181}
+  - component: {fileID: 989173183}
+  - component: {fileID: 989173182}
+  m_Layer: 10
+  m_Name: HealEffectiveness
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &989173181
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 224164334980954664, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989173180}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 436947581}
+  m_Father: {fileID: 1377615117}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -80, y: -294.04016}
+  m_SizeDelta: {x: 160, y: 50}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &989173182
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 114192287588462280, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989173180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.5588235, g: 0.4857021, b: 0.20134082, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 04c90ef3f5d110942a7dc36c1cba2fd8, type: 3}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 200
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Heal Effectiveness
+--- !u!222 &989173183
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 222603883899806320, guid: 83e98c39ce7b5614888823ff0c155601,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 989173180}
 --- !u!4 &1004007373 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 5cb2efcee8f379f4086ff2e51e09cbc4, type: 3}
@@ -9041,7 +9244,7 @@ GameObject:
   - component: {fileID: 1015076204}
   - component: {fileID: 1015076203}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: HealthRegenValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9119,7 +9322,7 @@ GameObject:
   - component: {fileID: 1022172998}
   - component: {fileID: 1022172997}
   m_Layer: 10
-  m_Name: Critical Strike Chance
+  m_Name: ManaRegen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9178,7 +9381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Critical Strike Chance
+  m_Text: Mana Regeneration
 --- !u!222 &1022172998
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9198,7 +9401,7 @@ GameObject:
   - component: {fileID: 1027532783}
   - component: {fileID: 1027532782}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: HealthValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9421,7 +9624,7 @@ GameObject:
   - component: {fileID: 1075133037}
   - component: {fileID: 1075133036}
   m_Layer: 10
-  m_Name: Text
+  m_Name: HealthValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9577,6 +9780,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &1091965828
 Prefab:
   m_ObjectHideFlags: 0
@@ -9994,8 +10198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -194.04}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: -80, y: -293.8}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1129428526
 MonoBehaviour:
@@ -10029,7 +10233,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: Intelligence
 --- !u!222 &1129428527
 CanvasRenderer:
@@ -11027,8 +11231,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -80, y: -144.04}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: -80, y: -194.04199}
+  m_SizeDelta: {x: 160, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207276247
 MonoBehaviour:
@@ -11062,7 +11266,7 @@ MonoBehaviour:
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 2
   m_Text: 'Agility
 
 '
@@ -12484,7 +12688,7 @@ GameObject:
   - component: {fileID: 1353262160}
   - component: {fileID: 1353262159}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: SpellPowerValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12617,14 +12821,15 @@ RectTransform:
   - {fileID: 1460181783}
   - {fileID: 1835466803}
   - {fileID: 910089860}
+  - {fileID: 989173181}
   - {fileID: 739319072}
   m_Father: {fileID: 1494486275}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.82001, y: -1366.556}
-  m_SizeDelta: {x: 231.6, y: 324.5}
+  m_AnchoredPosition: {x: 114.2, y: -1474.2}
+  m_SizeDelta: {x: 231.6, y: 258.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1377615118
 MonoBehaviour:
@@ -13120,7 +13325,7 @@ GameObject:
   - component: {fileID: 1414605605}
   - component: {fileID: 1414605604}
   m_Layer: 10
-  m_Name: Image (4)
+  m_Name: SpellPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13164,7 +13369,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 58eb895698544f84181afbf980f04509, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f516600d71f8f99418f5a00506924925, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13216,8 +13421,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.8, y: -1042.056}
-  m_SizeDelta: {x: 231.6, y: 324.5}
+  m_AnchoredPosition: {x: 115.8, y: -1215.3}
+  m_SizeDelta: {x: 231.6, y: 258.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418985227
 MonoBehaviour:
@@ -13272,7 +13477,7 @@ GameObject:
   - component: {fileID: 1420259252}
   - component: {fileID: 1420259251}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: AttackPowerValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14324,8 +14529,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1523652523
 MonoBehaviour:
@@ -14451,54 +14656,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -16331,8 +16551,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -105, y: 0}
-  m_SizeDelta: {x: 50, y: 50}
+  m_AnchoredPosition: {x: -130, y: 0}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1736894702
 MonoBehaviour:
@@ -16458,54 +16678,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -17232,19 +17467,9 @@ Prefab:
       objectReference: {fileID: 414609625}
     - target: {fileID: 114050202636961714, guid: 6cb2e97e2eb7ace489b099982d4a2d77,
         type: 2}
-      propertyPath: guiMenuButton
-      value: 
-      objectReference: {fileID: 1821788255}
-    - target: {fileID: 114050202636961714, guid: 6cb2e97e2eb7ace489b099982d4a2d77,
-        type: 2}
       propertyPath: gr
       value: 
       objectReference: {fileID: 751292844}
-    - target: {fileID: 82621356927999876, guid: 6cb2e97e2eb7ace489b099982d4a2d77,
-        type: 2}
-      propertyPath: spreadCustomCurve.m_RotationOrder
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6cb2e97e2eb7ace489b099982d4a2d77, type: 2}
   m_IsPrefabParent: 0
@@ -17253,6 +17478,17 @@ GameObject:
   m_PrefabParentObject: {fileID: 1878075617540284, guid: 6cb2e97e2eb7ace489b099982d4a2d77,
     type: 2}
   m_PrefabInternal: {fileID: 1797942532}
+--- !u!114 &1797942534
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1797942533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63308584ec9d34e43b29235fccc5b814, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1798546845
 GameObject:
   m_ObjectHideFlags: 0
@@ -17419,7 +17655,7 @@ GameObject:
   - component: {fileID: 1804966692}
   - component: {fileID: 1804966691}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: MoveSpeedValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17653,7 +17889,7 @@ GameObject:
   - component: {fileID: 1815684253}
   - component: {fileID: 1815684252}
   m_Layer: 10
-  m_Name: Image (2)
+  m_Name: AttackPower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17805,7 +18041,7 @@ GameObject:
   - component: {fileID: 1827193738}
   - component: {fileID: 1827193737}
   m_Layer: 10
-  m_Name: Critical Strike Chance
+  m_Name: Evasion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17864,7 +18100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Critical Strike Chance
+  m_Text: Evasion
 --- !u!222 &1827193738
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17884,7 +18120,7 @@ GameObject:
   - component: {fileID: 1835466805}
   - component: {fileID: 1835466804}
   m_Layer: 10
-  m_Name: Mana
+  m_Name: Energy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17943,7 +18179,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Mana
+  m_Text: Energy
 --- !u!222 &1835466805
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -18508,7 +18744,7 @@ GameObject:
   - component: {fileID: 1913078101}
   - component: {fileID: 1913078100}
   m_Layer: 10
-  m_Name: Critical Strike Multiply
+  m_Name: MoveSpeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18567,7 +18803,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Critical Strike Multiply
+  m_Text: 'Move Speed
 
 '
 --- !u!222 &1913078101
@@ -19597,7 +19833,7 @@ GameObject:
   - component: {fileID: 2027992198}
   - component: {fileID: 2027992197}
   m_Layer: 10
-  m_Name: Strength (1)
+  m_Name: AttackSpeedValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19880,8 +20116,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.8, y: -486.7}
-  m_SizeDelta: {x: 231.6, y: 324.5}
+  m_AnchoredPosition: {x: 115.8, y: -697.5}
+  m_SizeDelta: {x: 231.6, y: 258.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058086726
 MonoBehaviour:
@@ -20616,8 +20852,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 115.82, y: -162.2}
-  m_SizeDelta: {x: 231.6, y: 324.5}
+  m_AnchoredPosition: {x: 115, y: -250}
+  m_SizeDelta: {x: 230, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122491737
 MonoBehaviour:

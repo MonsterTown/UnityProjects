@@ -19,35 +19,35 @@ public class SkillPointsAdd : MonoBehaviour {
 
     void OnClick() {
 
-        if (player.GetComponent<UnitStats>().skillPointsValue > 0) {
+        if (player.GetComponent<UnitAttributes>().skillPointsValue > 0) {
             if (gameObject.name == "+ButtonStrength") {
                 float value = 1;
-                player.GetComponent<UnitStats>().Strength.BaseValue += value;
-                player.GetComponent<UnitStats>().skillPointsValue -= value;
+                player.GetComponent<UnitAttributes>().Strength.BaseValue += value;
+                player.GetComponent<UnitAttributes>().skillPointsValue -= value;
                 audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
             }
             if (gameObject.name == "+ButtonAgility") {
                 float value = 1;
-                player.GetComponent<UnitStats>().Agility.BaseValue += value;
-                player.GetComponent<UnitStats>().skillPointsValue -= value;
+                player.GetComponent<UnitAttributes>().Agility.BaseValue += value;
+                player.GetComponent<UnitAttributes>().skillPointsValue -= value;
                 audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
             }
             if (gameObject.name == "+ButtonIntelligence") {
                 float value = 1;
-                player.GetComponent<UnitStats>().Intelligence.BaseValue += value;
-                player.GetComponent<UnitStats>().skillPointsValue -= value;
+                player.GetComponent<UnitAttributes>().Intelligence.BaseValue += value;
+                player.GetComponent<UnitAttributes>().skillPointsValue -= value;
                 audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
             }
             if (gameObject.name == "+ButtonSpirit") {
                 float value = 1;
-                player.GetComponent<UnitStats>().Spirit.BaseValue += value;
-                player.GetComponent<UnitStats>().skillPointsValue -= value;
+                player.GetComponent<UnitAttributes>().Spirit.BaseValue += value;
+                player.GetComponent<UnitAttributes>().skillPointsValue -= value;
                 audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
             }
             if (gameObject.name == "+ButtonVitality") {
                 float value = 1;
-                player.GetComponent<UnitStats>().Vitality.BaseValue += value;
-                player.GetComponent<UnitStats>().skillPointsValue -= value;
+                player.GetComponent<UnitAttributes>().Vitality.BaseValue += value;
+                player.GetComponent<UnitAttributes>().skillPointsValue -= value;
                 audioSource.PlayOneShot(sounds[Random.Range(0, sounds.Length)]);
             }
         }

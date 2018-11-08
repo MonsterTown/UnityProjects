@@ -176,7 +176,7 @@ public class Unpack2 : MonoBehaviour {
         }
         
         private static bool IsSubstanceArchive(Object asset) {
-                return asset.GetType() == typeof(SubstanceArchive);
+                return false;
         }
         
         private static string GetFixedAssetName(Object asset) {

@@ -19,7 +19,7 @@ public class UnitStats : MonoBehaviour {
     [Header("Health", order = 1)]
     [Space(4, order = 2)]
 
-    public float healthCur;   //Make privats
+    public float healthCur;   //Make privats, public for Inspector
     public float HealthCur {
         get { return healthCur; }
         set {
@@ -85,8 +85,6 @@ public class UnitStats : MonoBehaviour {
 
     void Start() {
         StartCoroutine(Regeneration()); //Старт регенерации хитов, маны и усталости
-
-        Strength.AddObserver(AttackPower); //Подписка по паттерну обсервер
     }
 
     #region Health/Mana/Concentration Regeneration
@@ -156,42 +154,6 @@ public class UnitStats : MonoBehaviour {
     }
     #endregion
 
-    #region PrimaryAttributes
-    [Space(1, order = 0)]
-    [Header("Primary Attributes", order = 1)]
-    [Space(4, order = 2)]
-    public CharacterStat Strength;
-    public CharacterStat Agility;
-    public CharacterStat Intelligence;
-    public CharacterStat Spirit;
-    public CharacterStat Vitality;
-    #endregion
-
-    #region AttributePoints
-    [Space(1, order = 0)]
-    [Header("AttributePoints", order = 1)]
-    [Space(4, order = 2)]
-    public float skillPointsValue;
-    #endregion
-
-    #region SecondaryAttributes
-    [Space(1, order = 0)]
-    [Header("AttributePoints", order = 1)]
-    [Space(4, order = 2)]
-    public CharacterStat AttackPower;
-    public CharacterStat BlockPower;
-    public CharacterStat AttackSpeed;
-    public CharacterStat MoveSpeed;
-    public CharacterStat Evasion;
-    public CharacterStat Mana;
-    public CharacterStat Energy;
-    public CharacterStat SpellPower;
-    public CharacterStat HealthRegeneration;
-    public CharacterStat ManaRegeneration;
-    public CharacterStat EnergyRegeneration;
-    public CharacterStat Health;
-    public CharacterStat Toxity;
-    #endregion
 
     #region Dead
     void Dead() {

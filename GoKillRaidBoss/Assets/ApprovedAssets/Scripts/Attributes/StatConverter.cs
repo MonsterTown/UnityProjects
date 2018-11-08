@@ -7,7 +7,7 @@ using UnityEngine;
 public class StatConverter : MonoBehaviour {
 
     //Strength
-    public static float strengthToAttackPower = 1;
+    public static float strengthToAttackPower = 1.5f;
     public static float strengthToBlockPower = 1;
                   
     //Agility     
@@ -21,11 +21,12 @@ public class StatConverter : MonoBehaviour {
                   
     //Spirit      
     public static float spiritToEnergy = 1;
-    public static float spiritToHealthRegen = 1;
+    public static float spiritToHealthRegen = 0.1f;
     public static float spiritToManaRegen = 1;
     public static float spiritToEnergyRegen = 1;
+    public static float spiritToHealEffectiveness = 1;
 
     //Vitality
-    public static float vitalityToHealth = 1;
+    public static float vitalityToHealth = 13;
     public static float vitalityToToxity = 1;
 }

@@ -3,123 +3,107 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using UnityEngine;
 
-namespace Kryz.CharacterStats
-{
-	[Serializable]
-	public class CharacterStat : Observer, Observable
-	{
-		public float BaseValue;
+namespace Kryz.CharacterStats {
+    [Serializable]
+    public class CharacterStat : Observer, Observable {
+        public GameObject owner;
 
-		protected bool isDirty = true;
-		protected float lastBaseValue;
+        public float BaseValue;
 
-		protected float _value;
-		public virtual float Value {
-			get {
-				if(isDirty || lastBaseValue != BaseValue) {
-					lastBaseValue = BaseValue;
-					_value = CalculateFinalValue();
-					isDirty = false;
-                    Debug.Log("Stat change!");
+        protected bool isDirty = true;
+        protected float lastBaseValue;
+
+        protected float _value;
+        public virtual float Value {
+            get {
+                if (isDirty || lastBaseValue != BaseValue) {
+                    lastBaseValue = BaseValue;
+                    _value = CalculateFinalValue();
+                    isDirty = false;
                     NotifyObservers();
                 }
                 return _value;
-			}
-		}
-
-		protected readonly List<StatModifier> statModifiers;
-		public readonly ReadOnlyCollection<StatModifier> StatModifiers;
-
-		public CharacterStat()
-		{
-			statModifiers = new List<StatModifier>();
-			StatModifiers = statModifiers.AsReadOnly();
+            }
         }
 
-		public CharacterStat(float baseValue) : this()
-		{
-			BaseValue = baseValue;
-		}
+        protected readonly List<StatModifier> statModifiers;
+        public readonly ReadOnlyCollection<StatModifier> StatModifiers;
 
-		public virtual void AddModifier(StatModifier mod)
-		{
-			isDirty = true;
-			statModifiers.Add(mod);
-			statModifiers.Sort(CompareModifierOrder);
+        public CharacterStat() {
+            statModifiers = new List<StatModifier>();
+            StatModifiers = statModifiers.AsReadOnly();
         }
 
-		public virtual bool RemoveModifier(StatModifier mod)
-		{
-			if (statModifiers.Remove(mod))
-			{
-				isDirty = true;
-				return true;
-			}
-			return false;
-		}
+        public CharacterStat(float baseValue) : this() {
+            BaseValue = baseValue;
+        }
 
-		public virtual bool RemoveAllModifiersFromSource(object source)
-		{
-			bool didRemove = false;
+        public virtual void AddModifier(StatModifier mod) {
+            isDirty = true;
+            statModifiers.Add(mod);
+            statModifiers.Sort(CompareModifierOrder);
+        }
 
-			for (int i = statModifiers.Count - 1; i >= 0; i--)
-			{
-				if (statModifiers[i].Source == source)
-				{
-					isDirty = true;
-					didRemove = true;
-					statModifiers.RemoveAt(i);
-				}
-			}
-			return didRemove;
-		}
+        public virtual bool RemoveModifier(StatModifier mod) {
+            if (statModifiers.Remove(mod)) {
+                isDirty = true;
+                return true;
+            }
+            return false;
+        }
 
-		protected virtual int CompareModifierOrder(StatModifier a, StatModifier b)
-		{
-			if (a.Order < b.Order)
-				return -1;
-			else if (a.Order > b.Order)
-				return 1;
-			return 0; //if (a.Order == b.Order)
-		}
-		
-		protected virtual float CalculateFinalValue()
-		{
-			float finalValue = BaseValue;
-			float sumPercentAdd = 0;
+        public virtual bool RemoveAllModifiersFromSource(object source) {
+            bool didRemove = false;
 
-            for (int i = 0; i < statModifiers.Count; i++)
-			{
-				StatModifier mod = statModifiers[i];
+            for (int i = statModifiers.Count - 1; i >= 0; i--) {
+                if (statModifiers[i].Source == source) {
+                    isDirty = true;
+                    didRemove = true;
+                    statModifiers.RemoveAt(i);
+                }
+            }
+            return didRemove;
+        }
 
-				if (mod.Type == StatModType.Flat)
-				{
-					finalValue += mod.Value;
-				}
-				else if (mod.Type == StatModType.PercentAdd)
-				{
-					sumPercentAdd += mod.Value;
+        protected virtual int CompareModifierOrder(StatModifier a, StatModifier b) {
+            if (a.Order < b.Order)
+                return -1;
+            else if (a.Order > b.Order)
+                return 1;
+            return 0; //if (a.Order == b.Order)
+        }
 
-					if (i + 1 >= statModifiers.Count || statModifiers[i + 1].Type != StatModType.PercentAdd)
-					{
-						finalValue *= 1 + sumPercentAdd;
-						sumPercentAdd = 0;
-					}
-				}
-				else if (mod.Type == StatModType.PercentMult)
-				{
-					finalValue *= 1 + mod.Value;
-				}
-			}      
+        protected virtual float CalculateFinalValue() {
+            float finalValue = BaseValue;
+            float sumPercentAdd = 0;
+
+            for (int i = 0; i < statModifiers.Count; i++) {
+                StatModifier mod = statModifiers[i];
+
+                if (mod.Type == StatModType.Flat) {
+                    finalValue += mod.Value;
+                } else if (mod.Type == StatModType.PercentAdd) {
+                    sumPercentAdd += mod.Value;
+
+                    if (i + 1 >= statModifiers.Count || statModifiers[i + 1].Type != StatModType.PercentAdd) {
+                        finalValue *= 1 + sumPercentAdd;
+                        sumPercentAdd = 0;
+                    }
+                } else if (mod.Type == StatModType.PercentMult) {
+                    finalValue *= 1 + mod.Value;
+                }
+            }
             return (float)Math.Round(finalValue, 4);
-		}
+        }
 
         #region Observer and Observable realisation
 
         private List<Observer> observers = new List<Observer>();
 
-        public void ObserverUpdate(object ob) {
-            Debug.Log("New info " + ob);
+        public void ObserverUpdate() {
+            if (owner) {
+                owner.GetComponent<UnitAttributes>().CalculateAttributes();
+            }
         }
 
         public void AddObserver(Observer o) {
@@ -131,8 +115,9 @@ namespace Kryz.CharacterStats
         }
 
         public void NotifyObservers() {
-            foreach (Observer observer in observers)
-                observer.ObserverUpdate(_value);
+            foreach (Observer observer in observers) {
+                observer.ObserverUpdate();
+            }
         }
         #endregion
     }

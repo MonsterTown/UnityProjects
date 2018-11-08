@@ -1,7 +1,5 @@
 fileFormatVersion: 2
 guid: 74debcd88cff3ee4f93b824fc7930525
-timeCreated: 1524304446
-licenseType: Free
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -548,6 +546,7 @@ ModelImporter:
     13700016: Dragonsbane Thigh Pads_39042.Shape
     13700018: Dragonsbane Tunic_31516.Shape
     13700020: Genesis3Male.Shape
+    2186277476908879412: ImportLogs
   externalObjects:
   - first:
       type: UnityEngine:Material
@@ -767,6 +766,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
