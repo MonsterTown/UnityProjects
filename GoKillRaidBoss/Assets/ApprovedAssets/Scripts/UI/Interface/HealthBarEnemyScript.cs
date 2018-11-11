@@ -38,6 +38,9 @@ public class HealthBarEnemyScript : MonoBehaviour
     public void SetTarget(GameObject target)
     {
         this.target = target;
-        textField.text = target.name;
+        if (target)
+        {
+            textField.text = target.name;
+        }
     }
 }

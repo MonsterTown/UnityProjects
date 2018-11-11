@@ -30,15 +30,21 @@ public class LookDecision : Decision {
             i++;
         }
 
-        foreach (GameObject item in controller.GetComponent<UnitStats>().attackers) {
+        if (controller.GetComponent<UnitStats>().AttackersList.attackers != null)
+        {
+            foreach (GameObject item in controller.GetComponent<UnitStats>().AttackersList.attackers)
+            {
 
-            if (!controller.enemies.Contains(item)                                 //Еще нет в листе?
-             && item.gameObject.GetComponent<GameObjectTags>()                     //Есть компонент?
-             && item.gameObject.GetComponent<GameObjectTags>().unit == true        //Является юнитом
-             && item.gameObject.GetComponent<GameObjectTags>().dead == false       //не мертвый
-             && item.gameObject.GetComponent<GameObjectTags>().fraction != controller.unitStats.gameObjectTags.fraction) {  //*Не союзники (обьекты с одинаковыми тегами - фракциями)*/ 
+                if (!controller.enemies.Contains(item) //Еще нет в листе?
+                    && item.gameObject.GetComponent<GameObjectTags>() //Есть компонент?
+                    && item.gameObject.GetComponent<GameObjectTags>().unit == true //Является юнитом
+                    && item.gameObject.GetComponent<GameObjectTags>().dead == false //не мертвый
+                    && item.gameObject.GetComponent<GameObjectTags>().fraction != controller.unitStats.gameObjectTags.fraction)
+                {
+                    //*Не союзники (обьекты с одинаковыми тегами - фракциями)*/ 
 
-                controller.enemies.Add(item);   //заполнение списка врагов в контроллере каждый фрейм
+                    controller.enemies.Add(item); //заполнение списка врагов в контроллере каждый фрейм
+                }
             }
         }
 

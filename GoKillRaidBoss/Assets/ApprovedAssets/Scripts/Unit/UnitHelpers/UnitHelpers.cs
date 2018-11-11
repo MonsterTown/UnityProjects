@@ -1,5 +1,6 @@
 using UnityEngine;
 
+//Класс-хелпер для статических методов для юнита.
 public class UnitHelpers : MonoBehaviour
 {
     //Нахождения ближайшего врага в радиусе

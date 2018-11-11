@@ -31,60 +31,34 @@
             </e>
           </e>
           <e p="scripts" t="Include">
-            <e p="Animator" t="Include">
-              <e p="AnimatorDiveScript.cs" t="Include" />
-            </e>
-            <e p="Attributes" t="Include">
-              <e p="CharacterStat.cs" t="Include" />
-              <e p="StatConverter.cs" t="Include" />
-              <e p="StatModifier.cs" t="Include" />
-              <e p="UnitAttributes.cs" t="Include" />
+            <e p="Animations" t="Include">
+              <e p="Animator" t="Include">
+                <e p="AnimatorDiveScript.cs" t="Include" />
+              </e>
             </e>
             <e p="Audio" t="Include">
               <e p="AnimatorSounds.cs" t="Include" />
               <e p="AudioController.cs" t="Include" />
             </e>
-            <e p="CharacterMechanics.cs" t="Include" />
-            <e p="FPS.cs" t="Include" />
-            <e p="GameController.cs" t="Include" />
+            <e p="Camera" t="Include">
+              <e p="UpdateCamera.cs" t="Include" />
+            </e>
+            <e p="Controllers" t="Include">
+              <e p="GameController.cs" t="Include" />
+              <e p="PlayerController.cs" t="Include" />
+            </e>
+            <e p="Debug" t="Include">
+              <e p="FPS.cs" t="Include" />
+            </e>
             <e p="GameObjectTags.cs" t="Include" />
-            <e p="GetCurrentAnimatorClipInfoExample.cs" t="Include" />
-            <e p="HealthBarsScript.cs" t="Include" />
-            <e p="HitBoxScript.cs" t="Include" />
-            <e p="ObserverPattern" t="Include">
-              <e p="Observable.cs" t="Include" />
-              <e p="Observer.cs" t="Include" />
-            </e>
-            <e p="PlayerController.cs" t="Include" />
-            <e p="Projectile" t="Include">
-              <e p="ProjectileScript.cs" t="Include" />
-            </e>
-            <e p="Scriptable Objects" t="Include">
-              <e p="StateMachine" t="Include">
-                <e p="Action.cs" t="Include" />
-                <e p="AlertAction.cs" t="Include" />
-                <e p="AttackableCooldownDecision.cs" t="Include" />
-                <e p="AttackableDistanceDecision.cs" t="Include" />
-                <e p="AttackAction.cs" t="Include" />
-                <e p="Decision.cs" t="Include" />
-                <e p="IdleAction.cs" t="Include" />
-                <e p="LookDecision.cs" t="Include" />
-                <e p="SetClosestEnemyAction.cs" t="Include" />
-                <e p="SetTargetToMoveAction.cs" t="Include" />
-                <e p="State.cs" t="Include" />
-                <e p="StateController.cs" t="Include" />
-                <e p="Transitions.cs" t="Include" />
-              </e>
-              <e p="UnitMechanics" t="Include">
-                <e p="AbstractAttack.cs" t="Include" />
-                <e p="AbstractDead.cs" t="Include" />
-                <e p="AttackBoss.cs" t="Include" />
-                <e p="AttackPlayerRanged.cs" t="Include" />
-                <e p="DeadBoss.cs" t="Include" />
-                <e p="DeadPlayer.cs" t="Include" />
+            <e p="Patterns" t="Include">
+              <e p="ObserverPattern" t="Include">
+                <e p="Observable.cs" t="Include" />
+                <e p="Observer.cs" t="Include" />
               </e>
             </e>
             <e p="Test" t="Include">
+              <e p="GetCurrentAnimatorClipInfoExample.cs" t="Include" />
               <e p="TestClass.cs" t="Include" />
             </e>
             <e p="UI" t="Include">
@@ -98,6 +72,7 @@
                 <e p="MobileControllerCharacterMenuPlayerTab.cs" t="Include" />
                 <e p="MobileControllerRoll.cs" t="Include" />
               </e>
+              <e p="HealthBarsScript.cs" t="Include" />
               <e p="Interface" t="Include">
                 <e p="HealthBarEnemyScript.cs" t="Include" />
               </e>
@@ -107,15 +82,52 @@
               </e>
             </e>
             <e p="Unit" t="Include">
+              <e p="Attributes" t="Include">
+                <e p="CharacterStat.cs" t="Include" />
+                <e p="StatConverter.cs" t="Include" />
+                <e p="StatModifier.cs" t="Include" />
+                <e p="UnitAttributes.cs" t="Include" />
+              </e>
+              <e p="CharacterMechanics.cs" t="Include" />
+              <e p="HitBoxScript.cs" t="Include" />
+              <e p="Projectile" t="Include">
+                <e p="ProjectileScript.cs" t="Include" />
+              </e>
+              <e p="Scriptable Objects" t="Include">
+                <e p="StateMachine" t="Include">
+                  <e p="Action.cs" t="Include" />
+                  <e p="AlertAction.cs" t="Include" />
+                  <e p="AttackableCooldownDecision.cs" t="Include" />
+                  <e p="AttackableDistanceDecision.cs" t="Include" />
+                  <e p="AttackAction.cs" t="Include" />
+                  <e p="Decision.cs" t="Include" />
+                  <e p="IdleAction.cs" t="Include" />
+                  <e p="LookDecision.cs" t="Include" />
+                  <e p="SetClosestEnemyAction.cs" t="Include" />
+                  <e p="SetTargetToMoveAction.cs" t="Include" />
+                  <e p="State.cs" t="Include" />
+                  <e p="StateController.cs" t="Include" />
+                  <e p="Transitions.cs" t="Include" />
+                </e>
+                <e p="UnitMechanics" t="Include">
+                  <e p="AbstractAttack.cs" t="Include" />
+                  <e p="AbstractDead.cs" t="Include" />
+                  <e p="AttackBoss.cs" t="Include" />
+                  <e p="AttackPlayerRanged.cs" t="Include" />
+                  <e p="DeadBoss.cs" t="Include" />
+                  <e p="DeadPlayer.cs" t="Include" />
+                </e>
+              </e>
               <e p="UnitHelpers" t="Include">
                 <e p="UnitHelpers.cs" t="Include" />
               </e>
               <e p="UnitOnMouseOver.cs" t="Include" />
+              <e p="UnitStats" t="Include">
+                <e p="AttackersList.cs" t="Include" />
+                <e p="TakingDamage.cs" t="Include" />
+                <e p="UnitStats.cs" t="Include" />
+              </e>
             </e>
-            <e p="UnitStats" t="Include">
-              <e p="UnitStats.cs" t="Include" />
-            </e>
-            <e p="UpdateCamera.cs" t="Include" />
           </e>
         </e>
         <e p="AstarPathfindingProject" t="Include">
