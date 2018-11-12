@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-// ReSharper disable All
+﻿using UnityEngine;
 
 //Класс получения урона
-public class TakingDamageNew
+public class TakingDamage
 {
     //Название клипа анимации получения урона
     private const string HitNameAnim = "Hit";
@@ -15,7 +11,7 @@ public class TakingDamageNew
     private readonly Animator animator;
     private readonly AnimatorStateInfo HitLayerAnim; 
 
-    public TakingDamageNew(GameObject self)
+    public TakingDamage(GameObject self)
     {
         this.self = self;
         stats = self.GetComponent<UnitStats>();
@@ -28,8 +24,7 @@ public class TakingDamageNew
         float damageReducedByArmor = DamageArmorReduce(damage);
         
         stats.HealthCur -= damageReducedByArmor;
-        Debug.Log("dddd");
-        
+
         PlayHitAnimation();
 
         //Если это AI то добавить в список атакующих

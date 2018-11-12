@@ -28,7 +28,7 @@ public class AttackBoss : AbstractAttack {
             if (Vector3.Distance(item.transform.position, self.transform.position) < cleaveRange && isTargetFront(item.transform, self)) //собирает цели в радиусе 10
             {
                // item.GetComponent<UnitStats>().TakingDamage(self, damage);
-                item.GetComponent<UnitStats>().TakingDamageNew.DoDamage(self, damage);
+                item.GetComponent<UnitStats>().TakingDamage.DoDamage(self, damage);
             }
         }
     }

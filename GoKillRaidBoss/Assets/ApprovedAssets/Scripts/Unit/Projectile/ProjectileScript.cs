@@ -10,7 +10,7 @@ public class ProjectileScript : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(LifeTime());
+        StartCoroutine(LifeTime());       
     }
 
     public void OnImpact(GameObject targetHit) //Вызывается при попадании в хитбокс с триггер коллайдером.
@@ -21,7 +21,7 @@ public class ProjectileScript : MonoBehaviour
         Destroy(gameObject);
         //Нанесение урона
         // targetHit.GetComponent<UnitStats>().TakingDamage(ownerProjectile, damage);
-        targetHit.GetComponent<UnitStats>().TakingDamageNew.DoDamage(ownerProjectile, damage);
+        targetHit.GetComponent<UnitStats>().TakingDamage.DoDamage(ownerProjectile, damage);
     }
 
     IEnumerator LifeTime()

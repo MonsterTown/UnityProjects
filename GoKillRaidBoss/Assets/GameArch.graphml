@@ -56,7 +56,6 @@
       </data>
       <graph edgedefault="directed" id="n1:">
         <node id="n1::n0">
-          <data key="d5"/>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="104.0" width="224.0" x="-880.6841395833336" y="632.0087890624998"/>
@@ -71,7 +70,6 @@
           </data>
         </node>
         <node id="n1::n1">
-          <data key="d5"/>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="104.0" width="224.0" x="-880.6841395833336" y="866.0087890624999"/>
@@ -84,7 +82,6 @@
           </data>
         </node>
         <node id="n1::n2">
-          <data key="d5"/>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="104.0" width="224.0" x="-255.6841395833336" y="933.0787421874993"/>
@@ -98,7 +95,6 @@
           </data>
         </node>
         <node id="n1::n3">
-          <data key="d5"/>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="104.0" width="224.0" x="-263.8164062500002" y="625.7205656249996"/>
@@ -111,7 +107,6 @@
           </data>
         </node>
         <node id="n1::n4">
-          <data key="d5"/>
           <data key="d6">
             <y:ShapeNode>
               <y:Geometry height="113.35360000000003" width="206.26453333333328" x="-263.8164062500002" y="402.0087890624998"/>
@@ -129,18 +124,64 @@
           <data key="d5" xml:space="preserve"><![CDATA[dfgdfg]]></data>
           <data key="d6">
             <y:ShapeNode>
-              <y:Geometry height="113.35360000000003" width="224.00000000000003" x="-255.6841395833336" y="1134.8319890624998"/>
+              <y:Geometry height="113.35360000000003" width="224.00000000000003" x="-591.1201068857858" y="1134.8319890624998"/>
               <y:Fill color="#FFCC00" transparent="false"/>
               <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="152.0546875" x="35.97265625" xml:space="preserve" y="4.0">UnitStats::TakingDamage();</y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="52.685546875" x="85.6572265625" xml:space="preserve" y="4.0">UnitStats</y:NodeLabel>
               <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="4.0" y="54.67679999999996"/>
-              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="80.1484375" x="71.92578125" xml:space="preserve" y="47.32621406249996">Наносит урон<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="110.0" y="54.67679999999996">
+                <y:LabelModel>
+                  <y:SmartNodeLabelModel distance="4.0"/>
+                </y:LabelModel>
+                <y:ModelParameter>
+                  <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+                </y:ModelParameter>
+              </y:NodeLabel>
+              <y:Shape type="rectangle"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n1::n6">
+          <data key="d4" xml:space="preserve"><![CDATA[dfg]]></data>
+          <data key="d5" xml:space="preserve"><![CDATA[dfgdfg]]></data>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="113.35360000000003" width="224.00000000000003" x="-255.6841395833336" y="1306.9777656292572"/>
+              <y:Fill color="#FFCC00" transparent="false"/>
+              <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.375" x="69.3125" xml:space="preserve" y="4.0">TakingDamage</y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="4.0" y="54.67679999999996"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="134.91015625" x="44.544921875" xml:space="preserve" y="39.97562812499996">Класс получения урона
+юнитом<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
+              <y:Shape type="rectangle"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n1::n7">
+          <data key="d4" xml:space="preserve"><![CDATA[dfg]]></data>
+          <data key="d5" xml:space="preserve"><![CDATA[dfgdfg]]></data>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="113.35360000000003" width="224.00000000000003" x="-591.1201068857858" y="1322.9777656292572"/>
+              <y:Fill color="#FFCC00" transparent="false"/>
+              <y:BorderStyle color="#000000" raised="false" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="t" textColor="#000000" verticalTextPosition="bottom" visible="true" width="72.689453125" x="75.6552734375" xml:space="preserve" y="4.0">AttackersList</y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="l" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="4.0" y="54.67679999999996"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="4.0" x="110.0" y="54.67679999999996">
+                <y:LabelModel>
+                  <y:SmartNodeLabelModel distance="4.0"/>
+                </y:LabelModel>
+                <y:ModelParameter>
+                  <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+                </y:ModelParameter>
+              </y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="33.40234375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="182.16015625" x="20.919921875" xml:space="preserve" y="39.97562812499996">Список последних атаковавших
+этого юнита<y:LabelModel><y:SmartNodeLabelModel distance="4.0"/></y:LabelModel><y:ModelParameter><y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/></y:ModelParameter></y:NodeLabel>
               <y:Shape type="rectangle"/>
             </y:ShapeNode>
           </data>
         </node>
         <edge id="n1::e0" source="n1::n1" target="n1::n2">
-          <data key="d9"/>
           <data key="d10">
             <y:PolyLineEdge>
               <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -151,7 +192,6 @@
           </data>
         </edge>
         <edge id="n1::e1" source="n1::n0" target="n1::n3">
-          <data key="d9"/>
           <data key="d10">
             <y:PolyLineEdge>
               <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -163,6 +203,17 @@
         </edge>
         <edge id="n1::e2" source="n1::n3" target="n1::n2">
           <data key="d8" xml:space="preserve"/>
+          <data key="d10">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+              <y:Arrows source="none" target="white_delta"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n1::e3" source="n1::n2" target="n1::n6">
+          <data key="d8" xml:space="preserve"/>
           <data key="d9"/>
           <data key="d10">
             <y:PolyLineEdge>
@@ -171,6 +222,44 @@
               <y:Arrows source="none" target="white_delta"/>
               <y:BendStyle smoothed="false"/>
             </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n1::e4" source="n1::n6" target="n1::n7">
+          <data key="d8" xml:space="preserve"/>
+          <data key="d9"/>
+          <data key="d10">
+            <y:PolyLineEdge>
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+              <y:Arrows source="none" target="white_delta"/>
+              <y:BendStyle smoothed="false"/>
+            </y:PolyLineEdge>
+          </data>
+        </edge>
+        <edge id="n1::e5" source="n1::n5" target="n1::n6">
+          <data key="d9"/>
+          <data key="d10">
+            <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+              <y:Arrows source="none" target="none"/>
+              <y:StyleProperties>
+                <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_ASSOCIATION"/>
+              </y:StyleProperties>
+            </y:GenericEdge>
+          </data>
+        </edge>
+        <edge id="n1::e6" source="n1::n5" target="n1::n7">
+          <data key="d9"/>
+          <data key="d10">
+            <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+              <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+              <y:LineStyle color="#000000" type="dotted" width="2.0"/>
+              <y:Arrows source="none" target="none"/>
+              <y:StyleProperties>
+                <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_ASSOCIATION"/>
+              </y:StyleProperties>
+            </y:GenericEdge>
           </data>
         </edge>
       </graph>

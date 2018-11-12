@@ -109,6 +109,7 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitHelpers\UnitHelpers.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitOnMouseOver.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitStats\AttackersList.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitStats\Health.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitStats\TakingDamage.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Unit\UnitStats\UnitStats.cs" />
     <Compile Include="Assets\AstarPathfindingProject\Behaviors\AIDestinationSetter.cs" />

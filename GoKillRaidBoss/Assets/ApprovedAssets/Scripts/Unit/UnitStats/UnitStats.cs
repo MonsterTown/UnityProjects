@@ -1,9 +1,6 @@
-﻿using Kryz.CharacterStats;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityStandardAssets.Characters.ThirdPerson;
-using System;
 
 public class UnitStats : MonoBehaviour
 {
@@ -13,14 +10,14 @@ public class UnitStats : MonoBehaviour
     public GameObject hitBox; //ссылка на дочерний хитбокс
     public AbstractDead deadScript;
     public AbstractAttack attackScript;
-    public TakingDamageNew TakingDamageNew;
-    public AttackersList AttackersList;
+    public TakingDamage TakingDamage;
+    [HideInInspector] public AttackersList AttackersList;
 
     #region Fields
 
     //Health
     [Space(1, order = 0)] [Header("Health", order = 1)] [Space(4, order = 2)] [SerializeField]
-    private float healthCur; //Make privats, public for Inspector
+    private float healthCur;
 
     public float HealthCur
     {
@@ -90,8 +87,9 @@ public class UnitStats : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         gameObjectTags = transform.root.gameObject.GetComponent<GameObjectTags>();
-        TakingDamageNew = new TakingDamageNew(transform.root.gameObject);
+        TakingDamage = new TakingDamage(transform.root.gameObject);
         AttackersList = transform.root.gameObject.AddComponent<AttackersList>();
+        AttackersList.Init(transform.root.gameObject);
     }
 
     void Start()
@@ -111,57 +109,6 @@ public class UnitStats : MonoBehaviour
     }
 
     #endregion
-
-//    #region TakingDamage
-//
-//    float DamageArmorReduce(float damage)
-//    {
-//        return damage -= armor;
-//    }
-//
-//    public void TakingDamage(GameObject from, float damage)
-//    {
-//        float damageReducedByArmor = DamageArmorReduce(damage);
-//        HealthCur -= damageReducedByArmor;
-//        if (!animator.GetCurrentAnimatorStateInfo(1).IsName("Hit")) //Проигрывается ли анимация получения удара? Если да то ненадо снова ее слать (1)значит 2 слой в аниматоре
-//        {
-//            animator.SetTrigger("Hit");
-//        }
-//
-//        //Если это AI то добавить в список атакующих
-//        AddAttackerToEnemyList(from);
-//    }
-//
-//    #endregion
-//
-//    #region AddAttackersToEnemyList
-//
-//    //Когда юнит получает урон он добавляется в список тех кто его атакнул, если врагов во круге нет, он пойдет искать обидчика в течении 10 сек.
-//    public List<GameObject> attackers;
-//
-//    public void AddAttackerToEnemyList(GameObject attacker)
-//    {
-//        if (!attackers.Contains(attacker) //Еще нет в листе?
-//            && attacker.gameObject.transform.root.gameObject != transform.root.gameObject /*Не сам*/
-//            && attacker.gameObject.GetComponent<GameObjectTags>() //Есть компонент? 
-//            && attacker.gameObject.GetComponent<GameObjectTags>().unit == true //Является юнитом 
-//            && attacker.gameObject.GetComponent<GameObjectTags>().dead == false //не мертвый 
-//            && attacker.gameObject.GetComponent<GameObjectTags>().fraction != gameObjectTags.fraction)
-//        {
-//            //*Не союзники (обьекты с одинаковыми тегами - фракциями)
-//
-//            attackers.Add(attacker);
-//            StartCoroutine(RemoveAttackerFromList(attacker));
-//        }
-//    }
-//
-//    IEnumerator RemoveAttackerFromList(GameObject attacker)
-//    {
-//        yield return new WaitForSeconds(10f);
-//        attackers.Remove(attacker);
-//    }
-//
-//    #endregion
 
     #region HitEvent
 
