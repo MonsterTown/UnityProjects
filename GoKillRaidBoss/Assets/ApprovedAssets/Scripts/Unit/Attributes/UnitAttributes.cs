@@ -58,8 +58,10 @@ public class UnitAttributes : MonoBehaviour {
     StatModifier toxityMod = new StatModifier(1, StatModType.Flat);
     #endregion
 
+    
+    
     void Start () {
-        InitStatsModifiers();
+     //   InitStatsModifiers(); //TODO: Нужен класс инициализатор который будет пересчитывать характеристики где то в одном классе
     }
 
     public void InitStatsModifiers() {
@@ -169,11 +171,15 @@ public class UnitAttributes : MonoBehaviour {
         //Костыль
         HealthCalculate();
     }
-
+    
     public void HealthCalculate() {
-        gameObject.GetComponent<UnitStats>().HealthMax = Health.Value;
+        gameObject.GetComponent<UnitStats>().Health.HealthMax = Health.Value;
         gameObject.GetComponent<UnitStats>().attackDamage = AttackPower.Value;
-        gameObject.GetComponent<UnitStats>().HealthRegen = HealthRegeneration.Value;
-
+        gameObject.GetComponent<UnitStats>().Health.HealthRegen = HealthRegeneration.Value;
     }
+
+//    private void OnEnable()
+//    {
+//        HealthCalculate();
+//    }
 }

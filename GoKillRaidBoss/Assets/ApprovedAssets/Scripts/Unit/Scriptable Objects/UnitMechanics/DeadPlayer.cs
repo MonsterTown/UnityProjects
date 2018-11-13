@@ -14,7 +14,7 @@ public class DeadPlayer : AbstractDead {
     private void DeadPlayerAction(GameObject self) {  
         self.GetComponent<GameObjectTags>().dead = true;
         self.GetComponent<Animator>().SetTrigger("Dying");
-        self.transform.root.gameObject.GetComponent<UnitStats>().regenOn = false; //выключает регенерацию хп
+        self.transform.root.gameObject.GetComponent<UnitStats>().Health.regenOn = false; //выключает регенерацию хп
 
         //Disable scripts      
         self.transform.root.gameObject.GetComponent<CharacterController>().enabled = false;

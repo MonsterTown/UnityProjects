@@ -124,7 +124,7 @@
               <e p="UnitOnMouseOver.cs" t="Include" />
               <e p="UnitStats" t="Include">
                 <e p="AttackersList.cs" t="Include" />
-                <e p="Health.cs" t="Include" />
+                <e p="HealthOLD.cs" t="Include" />
                 <e p="TakingDamage.cs" t="Include" />
                 <e p="UnitStats.cs" t="Include" />
               </e>

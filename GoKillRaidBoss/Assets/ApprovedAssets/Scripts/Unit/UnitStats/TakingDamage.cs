@@ -23,7 +23,7 @@ public class TakingDamage
     {
         float damageReducedByArmor = DamageArmorReduce(damage);
         
-        stats.HealthCur -= damageReducedByArmor;
+        stats.Health.HealthCur -= damageReducedByArmor;
 
         PlayHitAnimation();
 

@@ -25,8 +25,8 @@ public class HealthBarEnemyScript : MonoBehaviour
     {
         if (target != null)
         {
-            HealthCur = target.GetComponent<UnitStats>().HealthCur;
-            HealthMax = target.GetComponent<UnitStats>().HealthMax;
+            HealthCur = target.GetComponent<UnitStats>().Health.HealthCur;
+            HealthMax = target.GetComponent<UnitStats>().Health.HealthMax;
             GetComponent<Image>().fillAmount = HealthCur / HealthMax;
         }
         else

@@ -20,8 +20,8 @@ public class HealthBarsScript : MonoBehaviour
     {
         if (barName == "HealthCur")
         {
-            HealthCur = player.GetComponent<UnitStats>().HealthCur;
-            HealthMax = player.GetComponent<UnitStats>().HealthMax;
+            HealthCur = player.GetComponent<UnitStats>().Health.HealthCur;
+            HealthMax = player.GetComponent<UnitStats>().Health.HealthMax;
             GetComponent<Image>().fillAmount = HealthCur / HealthMax;
         }
     }

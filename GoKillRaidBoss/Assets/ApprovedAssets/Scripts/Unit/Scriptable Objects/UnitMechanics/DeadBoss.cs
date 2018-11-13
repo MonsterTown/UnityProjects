@@ -21,7 +21,7 @@ public class DeadBoss : AbstractDead {
         self.transform.root.gameObject.GetComponent<CapsuleCollider>().enabled = false;
         self.transform.root.gameObject.GetComponent<ThirdPersonCharacter>().enabled = false;
         self.transform.root.gameObject.GetComponent<AIPath>().enabled = false;
-        self.transform.root.gameObject.GetComponent<UnitStats>().regenOn = false;
+        self.transform.root.gameObject.GetComponent<UnitStats>().Health.regenOn = false;
         GameObject hitBox = self.transform.root.gameObject.GetComponentInChildren<UnitStats>().hitBox;
         if (hitBox) {
             hitBox.gameObject.SetActive(false);

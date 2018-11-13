@@ -6,6 +6,8 @@ using UnityEngine;
 namespace Kryz.CharacterStats {
     [Serializable]
     public class CharacterStat : Observer, Observable {
+        
+        [HideInInspector]
         public GameObject owner;
 
         public float BaseValue;
@@ -13,6 +15,7 @@ namespace Kryz.CharacterStats {
         protected bool isDirty = true;
         protected float lastBaseValue;
 
+        [SerializeField]
         protected float _value;
         public virtual float Value {
             get {
