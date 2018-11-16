@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimatorSounds : StateMachineBehaviour {
-
     public GameObject owner;
 
     //OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -15,25 +14,19 @@ public class AnimatorSounds : StateMachineBehaviour {
     }
 
     void HitSound(AnimatorStateInfo stateInfo) {
-
         if (stateInfo.IsTag("Hit")) {
-
             owner.GetComponentInChildren<AudioController>().audioController.PlayHitSounds();
         }
     }
 
     void DeathSound(AnimatorStateInfo stateInfo) {
-
         if (stateInfo.IsTag("Death")) {
-
             owner.GetComponentInChildren<AudioController>().audioController.PlayDeathSounds();
         }
     }
 
     void AttackSound(AnimatorStateInfo stateInfo) {
-
         if (stateInfo.IsTag("Attack")) {
-
             owner.GetComponentInChildren<AudioController>().audioController.PlayAttackSounds();
         }
     }

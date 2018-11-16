@@ -5,8 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class MobileControllerCharacterMenuPlayerTab : MonoBehaviour, IPointerUpHandler, IPointerDownHandler {
-
-    public bool input; //Возвращается всегда true пока нажата
+    public bool input;   //Возвращается всегда true пока нажата
     public bool trigger; //Возвращает true в 1 Update методе и в LateUpdate выключается
 
     public void OnPointerDown(PointerEventData eventData) {

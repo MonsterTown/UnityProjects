@@ -6,8 +6,6 @@ using UnityEngine;
 
 [CreateAssetMenu(menuName = "PluggableAI/AttackBoss")]
 public class AttackBoss : AbstractAttack {
-
-
     public float cleaveRange = 6;
 
     public override void Attack(GameObject self) {
@@ -15,7 +13,6 @@ public class AttackBoss : AbstractAttack {
     }
 
     private void AttackAction(GameObject self) {
-
         float attackDamage = self.transform.root.gameObject.GetComponent<UnitStats>().attackDamage;
         float minDamage = self.transform.root.gameObject.GetComponent<UnitStats>().minDamage;
         float maxDamage = self.transform.root.gameObject.GetComponent<UnitStats>().maxDamage;
@@ -27,7 +24,7 @@ public class AttackBoss : AbstractAttack {
         foreach (var item in enemiesAroundList) {
             if (Vector3.Distance(item.transform.position, self.transform.position) < cleaveRange && isTargetFront(item.transform, self)) //собирает цели в радиусе 10
             {
-               // item.GetComponent<UnitStats>().TakingDamage(self, damage);
+                // item.GetComponent<UnitStats>().TakingDamage(self, damage);
                 item.GetComponent<UnitStats>().TakingDamage.DoDamage(self, damage);
             }
         }
@@ -40,6 +37,7 @@ public class AttackBoss : AbstractAttack {
         if (angle > 0) {
             return true;
         }
+
         return false;
-    }  
+    }
 }

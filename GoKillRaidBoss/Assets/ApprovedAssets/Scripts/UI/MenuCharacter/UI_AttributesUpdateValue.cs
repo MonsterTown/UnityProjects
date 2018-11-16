@@ -6,14 +6,12 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UI_AttributesUpdateValue : MonoBehaviour {
-
     public GameObject player;
 
 
-    [Space(1, order = 0)]
-    [Header("Primary Attributes", order = 1)]
-    [Space(4, order = 2)]
+    [Space(1, order = 0)] [Header("Primary Attributes", order = 1)] [Space(4, order = 2)]
     public Text strengthValue;
+
     public Text agilityValue;
     public Text intelligenceValue;
     public Text spiritValue;
@@ -21,10 +19,9 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
 
     public Text skillPointsValue;
 
-    [Space(1, order = 0)]
-    [Header("Secondary Attributes", order = 1)]
-    [Space(4, order = 2)]
+    [Space(1, order = 0)] [Header("Secondary Attributes", order = 1)] [Space(4, order = 2)]
     public Text attackPowerValue;
+
     public Text blockPowerValue;
     public Text attackSpeedValue;
     public Text moveSpeedValue;
@@ -39,10 +36,9 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
     public Text healthValue;
     public Text toxityValue;
 
-    [Space(1, order = 0)]
-    [Header("Quick Menu Stats", order = 1)]
-    [Space(4, order = 2)]
+    [Space(1, order = 0)] [Header("Quick Menu Stats", order = 1)] [Space(4, order = 2)]
     public Text quickHealth;
+
     public Text quickAttackPower;
     public Text quickSpellPower;
     public Text quickMana;

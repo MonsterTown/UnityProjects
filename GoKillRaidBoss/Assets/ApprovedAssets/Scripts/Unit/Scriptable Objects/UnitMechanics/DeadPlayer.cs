@@ -5,13 +5,11 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 [CreateAssetMenu(menuName = "PluggableAI/Player/DeadPlayer")]
 public class DeadPlayer : AbstractDead {
-
-
     public override void Dead(GameObject self) {
         DeadPlayerAction(self);
     }
 
-    private void DeadPlayerAction(GameObject self) {  
+    private void DeadPlayerAction(GameObject self) {
         self.GetComponent<GameObjectTags>().dead = true;
         self.GetComponent<Animator>().SetTrigger("Dying");
         self.transform.root.gameObject.GetComponent<UnitStats>().Health.regenOn = false; //выключает регенерацию хп

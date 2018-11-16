@@ -9,7 +9,6 @@ public class SetClosestEnemyAction : Action {
     }
 
     private void SetClosestEnemy(StateController controller) {
-
         controller.targetForChaseOrAttack = ClosestUnit(controller, controller.enemies);
     }
 

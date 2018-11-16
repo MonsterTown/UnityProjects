@@ -4,30 +4,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class UnitAttributes : MonoBehaviour {
-
     #region PrimaryAttributes
-    [Space(1, order = 0)]
-    [Header("Primary Attributes", order = 1)]
-    [Space(4, order = 2)]
+
+    [Space(1, order = 0)] [Header("Primary Attributes", order = 1)] [Space(4, order = 2)]
     public CharacterStat Strength;
+
     public CharacterStat Agility;
     public CharacterStat Intelligence;
     public CharacterStat Spirit;
     public CharacterStat Vitality;
+
     #endregion
 
-    #region AttributePoints
-    [Space(1, order = 0)]
-    [Header("AttributePoints", order = 1)]
-    [Space(4, order = 2)]
+    [Space(1, order = 0)] [Header("Attribute Points", order = 1)] [Space(4, order = 2)]
     public float skillPointsValue;
-    #endregion
 
     #region SecondaryAttributes
-    [Space(1, order = 0)]
-    [Header("AttributePoints", order = 1)]
-    [Space(4, order = 2)]
+
+    [Space(1, order = 0)] [Header("Secondary Attributes", order = 1)] [Space(4, order = 2)]
     public CharacterStat AttackPower;
+
     public CharacterStat BlockPower;
     public CharacterStat AttackSpeed;
     public CharacterStat MoveSpeed;
@@ -38,34 +34,36 @@ public class UnitAttributes : MonoBehaviour {
     public CharacterStat HealthRegeneration;
     public CharacterStat ManaRegeneration;
     public CharacterStat EnergyRegeneration;
-    public CharacterStat HealEffectiveness;   //Эффективность лечения, увеличивает получаемое лечение
+    public CharacterStat HealEffectiveness; //Эффективность лечения, увеличивает получаемое лечение
     public CharacterStat Health;
     public CharacterStat Toxity;
 
-    StatModifier attackPowerMod = new StatModifier(1, StatModType.Flat);
-    StatModifier blockPowerMod = new StatModifier(1, StatModType.Flat);
-    StatModifier attackSpeedMod = new StatModifier(1, StatModType.Flat);
-    StatModifier moveSpeedMod = new StatModifier(1, StatModType.Flat);
-    StatModifier evasionMod = new StatModifier(1, StatModType.Flat);
-    StatModifier manaMod = new StatModifier(1, StatModType.Flat);
-    StatModifier spellPowerMod = new StatModifier(1, StatModType.Flat);
-    StatModifier energyMod = new StatModifier(1, StatModType.Flat);
-    StatModifier healthMod = new StatModifier(1, StatModType.Flat);
-    StatModifier healthRegenMod = new StatModifier(1, StatModType.Flat);
-    StatModifier healEffectivMod = new StatModifier(1, StatModType.Flat);
-    StatModifier manaRegenMod = new StatModifier(1, StatModType.Flat);
-    StatModifier energyRegenMod = new StatModifier(1, StatModType.Flat);
-    StatModifier toxityMod = new StatModifier(1, StatModType.Flat);
+    private StatModifier attackPowerMod;
+    private StatModifier blockPowerMod;
+    private StatModifier attackSpeedMod;
+    private StatModifier moveSpeedMod;
+    private StatModifier evasionMod;
+    private StatModifier manaMod;
+    private StatModifier spellPowerMod;
+    private StatModifier energyMod;
+    private StatModifier healthMod;
+    private StatModifier healthRegenMod;
+    private StatModifier healEffectivMod;
+    private StatModifier manaRegenMod;
+    private StatModifier energyRegenMod;
+    private StatModifier toxityMod;
+
     #endregion
 
-    
-    
-    void Start () {
-     //   InitStatsModifiers(); //TODO: Нужен класс инициализатор который будет пересчитывать характеристики где то в одном классе
+
+    void Start() {
+        InitStatsModifiers(); //TODO: Возможно нужен класс инициализатор который будет пересчитывать характеристики где то в одном классе
+        SecondaryAttributesObserverInit();
+        CalculateAttributes();
     }
 
     public void InitStatsModifiers() {
-        Strength.AddObserver(AttackPower); //Подписка по паттерну обсервер
+        Strength.AddObserver(AttackPower); //Подписка по паттерну обсервер. Если ктото дернет Strength.Value то у AttackPower сработает метод UpdateObserver
         Strength.AddObserver(BlockPower);
 
         Agility.AddObserver(AttackSpeed);
@@ -83,6 +81,14 @@ public class UnitAttributes : MonoBehaviour {
         Spirit.AddObserver(ManaRegeneration);
         Spirit.AddObserver(EnergyRegeneration);
         Spirit.AddObserver(HealEffectiveness);
+
+        //======================
+
+        Strength.owner = gameObject;
+        Agility.owner = gameObject;
+        Intelligence.owner = gameObject;
+        Spirit.owner = gameObject;
+        Vitality.owner = gameObject;
 
         //============
         AttackPower.owner = gameObject;
@@ -104,6 +110,12 @@ public class UnitAttributes : MonoBehaviour {
         ManaRegeneration.owner = gameObject;
         EnergyRegeneration.owner = gameObject;
         HealEffectiveness.owner = gameObject;
+    }
+
+    //Подписка вторичных аттрибутов на классы статы.
+    public void SecondaryAttributesObserverInit() {
+        Health.AddObserver(gameObject.GetComponent<UnitStats>().Health); //Подписка по паттерну обсервер
+        HealthRegeneration.AddObserver(gameObject.GetComponent<UnitStats>().Health);
     }
 
     //Тут пересчитываются все вторичные атрибуты
@@ -128,7 +140,7 @@ public class UnitAttributes : MonoBehaviour {
         EnergyRegeneration.RemoveModifier(energyRegenMod);
         HealEffectiveness.RemoveModifier(healEffectivMod);
 
-        //Создаются заново
+        // Создаются заново
         attackPowerMod = new StatModifier(StatConverter.strengthToAttackPower * Strength.Value, StatModType.Flat);
         blockPowerMod = new StatModifier(StatConverter.strengthToBlockPower * Strength.Value, StatModType.Flat);
 
@@ -136,7 +148,7 @@ public class UnitAttributes : MonoBehaviour {
         moveSpeedMod = new StatModifier(StatConverter.agilityToMoveSpeed * Agility.Value, StatModType.Flat);
         evasionMod = new StatModifier(StatConverter.agilityToEvasion * Agility.Value, StatModType.Flat);
 
-        spellPowerMod = new StatModifier(StatConverter.intelligenceToSpellPower * Intelligence.Value, StatModType.Flat);   
+        spellPowerMod = new StatModifier(StatConverter.intelligenceToSpellPower * Intelligence.Value, StatModType.Flat);
         manaMod = new StatModifier(StatConverter.intelligenceToMana * Intelligence.Value, StatModType.Flat);
 
         healthMod = new StatModifier(StatConverter.vitalityToHealth * Vitality.Value, StatModType.Flat);
@@ -171,15 +183,16 @@ public class UnitAttributes : MonoBehaviour {
         //Костыль
         HealthCalculate();
     }
-    
+
+    //Перерасчет непосредственно статов
     public void HealthCalculate() {
         gameObject.GetComponent<UnitStats>().Health.HealthMax = Health.Value;
         gameObject.GetComponent<UnitStats>().attackDamage = AttackPower.Value;
         gameObject.GetComponent<UnitStats>().Health.HealthRegen = HealthRegeneration.Value;
     }
 
-//    private void OnEnable()
-//    {
-//        HealthCalculate();
-//    }
+    //Для паттрена обсервер, он срабатывает только тогда когда срабатывает геттер.
+    private void OnGUI() {
+        GetComponent<UnitAttributes>().Health.Value.ToString();
+    }
 }

@@ -6,17 +6,15 @@ using UnityEngine;
 namespace Kryz.CharacterStats {
     [Serializable]
     public class CharacterStat : Observer, Observable {
-        
-        [HideInInspector]
-        public GameObject owner;
+        [SerializeField] public GameObject owner;
 
         public float BaseValue;
 
         protected bool isDirty = true;
         protected float lastBaseValue;
 
-        [SerializeField]
-        protected float _value;
+        [SerializeField] protected float _value;
+
         public virtual float Value {
             get {
                 if (isDirty || lastBaseValue != BaseValue) {
@@ -25,6 +23,7 @@ namespace Kryz.CharacterStats {
                     isDirty = false;
                     NotifyObservers();
                 }
+
                 return _value;
             }
         }
@@ -52,6 +51,7 @@ namespace Kryz.CharacterStats {
                 isDirty = true;
                 return true;
             }
+
             return false;
         }
 
@@ -65,6 +65,7 @@ namespace Kryz.CharacterStats {
                     statModifiers.RemoveAt(i);
                 }
             }
+
             return didRemove;
         }
 
@@ -96,12 +97,13 @@ namespace Kryz.CharacterStats {
                     finalValue *= 1 + mod.Value;
                 }
             }
-            return (float)Math.Round(finalValue, 4);
+
+            return (float) Math.Round(finalValue, 4);
         }
 
         #region Observer and Observable realisation
 
-        private List<Observer> observers = new List<Observer>();
+        [SerializeField] public List<Observer> observers = new List<Observer>();
 
         public void ObserverUpdate() {
             if (owner) {
@@ -122,6 +124,7 @@ namespace Kryz.CharacterStats {
                 observer.ObserverUpdate();
             }
         }
+
         #endregion
     }
 }

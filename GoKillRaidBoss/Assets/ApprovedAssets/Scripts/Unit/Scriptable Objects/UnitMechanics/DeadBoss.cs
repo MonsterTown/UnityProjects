@@ -6,13 +6,11 @@ using UnityStandardAssets.Characters.ThirdPerson;
 
 [CreateAssetMenu(menuName = "PluggableAI/DeadBoss")]
 public class DeadBoss : AbstractDead {
-
-
     public override void Dead(GameObject self) {
         DeadAction(self);
     }
 
-    private void DeadAction(GameObject self) {  
+    private void DeadAction(GameObject self) {
         self.GetComponent<GameObjectTags>().dead = true;
         self.GetComponent<Animator>().SetTrigger("Dying");
 

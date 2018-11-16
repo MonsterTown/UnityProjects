@@ -10,11 +10,10 @@ public class SetTargetToMoveAction : Action {
     }
 
     private void SetTargetToMove(StateController controller) {
-
         Animator animator = controller.GetComponent<UnitStats>().animator;
 
         animator.SetInteger("Attack", 0);
-        if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Idle") {                   //Ждет пока закончится клип атаки
+        if (animator.GetCurrentAnimatorClipInfo(0)[0].clip.name == "Idle") { //Ждет пока закончится клип атаки
             controller.transform.root.gameObject.GetComponent<AIDestinationSetter>().target = controller.targetForChaseOrAttack.transform;
             controller.transform.root.gameObject.GetComponent<AIPath>().canMove = true;
             animator.SetBool("Move", true);

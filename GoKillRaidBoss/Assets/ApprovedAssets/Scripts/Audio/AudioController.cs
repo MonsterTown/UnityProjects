@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioController : MonoBehaviour {
-
     public AudioController audioController;
 
     public AudioSource audioSource;
@@ -12,15 +11,13 @@ public class AudioController : MonoBehaviour {
     public AudioClip[] hitSounds;
     public AudioClip[] deathSounds;
 
-    private void Awake()
-    {
-        if (!audioController)
-        {
+    private void Awake() {
+        if (!audioController) {
             audioController = this;
         }
-        if (false)
-        {
-           // audioSource.mute = true;
+
+        if (false) {
+            // audioSource.mute = true;
         }
     }
 
@@ -41,5 +38,4 @@ public class AudioController : MonoBehaviour {
             audioSource.PlayOneShot(deathSounds[Random.Range(0, deathSounds.Length)]);
         }
     }
-
 }

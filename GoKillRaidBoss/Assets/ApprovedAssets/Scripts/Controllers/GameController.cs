@@ -1,7 +1,6 @@
 ﻿using UnityEngine;
 
 public class GameController : MonoBehaviour {
-
     public static GameObject instance;
 
     //UI Элементы
@@ -16,21 +15,18 @@ public class GameController : MonoBehaviour {
     public MobileControllerCharacterMenuInventoryTab guiCharMenuInventoryTab;
     public MobileControllerCharacterMenuPlayerTab guiCharMenuPlayerTab;
 
-    void Awake () {
+    void Awake() {
         instance = this.gameObject; //Ссылка на обьект GameSettings статическая
     }
 
     void Update() {
-
         ButtonCharacterMenu();
         // AbilityTab();
         Tabs();
     }
 
     public void ButtonCharacterMenu() {
-
-        if (Input.GetKeyDown(KeyCode.I )|| guiCharMenuButton.trigger) {
-
+        if (Input.GetKeyDown(KeyCode.I) || guiCharMenuButton.trigger) {
             Debug.Log(guiCharMenuButton.trigger + "  " + guiCharMenuButtonClose.input);
 
             if (menuCharacter.activeSelf) {
@@ -40,8 +36,7 @@ public class GameController : MonoBehaviour {
             }
         }
 
-        if (guiCharMenuButtonClose.trigger ) {
-            
+        if (guiCharMenuButtonClose.trigger) {
             menuCharacter.SetActive(false);
         }
     }
@@ -52,11 +47,13 @@ public class GameController : MonoBehaviour {
             abilitiesTabContainer.SetActive(true);
             inventoryTabContainer.SetActive(false);
         }
+
         if (guiCharMenuInventoryTab.trigger) {
             playerTabContainer.SetActive(false);
             abilitiesTabContainer.SetActive(false);
             inventoryTabContainer.SetActive(true);
         }
+
         if (guiCharMenuPlayerTab.trigger) {
             playerTabContainer.SetActive(true);
             abilitiesTabContainer.SetActive(false);

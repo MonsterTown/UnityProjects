@@ -2,15 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProjectileScript : MonoBehaviour
-{
+public class ProjectileScript : MonoBehaviour {
     public GameObject ownerProjectile; //Владелец снаряда
-    public GameObject onImpactEffect; //Эффект взрыва стрелы
+    public GameObject onImpactEffect;  //Эффект взрыва стрелы
     public float damage;
 
-    private void Start()
-    {
-        StartCoroutine(LifeTime());       
+    private void Start() {
+        StartCoroutine(LifeTime());
     }
 
     public void OnImpact(GameObject targetHit) //Вызывается при попадании в хитбокс с триггер коллайдером.
@@ -24,8 +22,7 @@ public class ProjectileScript : MonoBehaviour
         targetHit.GetComponent<UnitStats>().TakingDamage.DoDamage(ownerProjectile, damage);
     }
 
-    IEnumerator LifeTime()
-    {
+    IEnumerator LifeTime() {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject);
     }

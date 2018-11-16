@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class TestClass : MonoBehaviour {
+    public delegate void MyDelegate();
 
-
-    public  delegate void MyDelegate();
-    public  MyDelegate myD = delegate { };
+    public MyDelegate myD = delegate { };
 
     void Start() {
         myD = Text;
@@ -20,7 +19,6 @@ public class TestClass : MonoBehaviour {
 
 
     private void Text() {
-
         Debug.Log("text!", gameObject);
     }
 }

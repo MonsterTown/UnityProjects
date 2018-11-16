@@ -1,4 +1,3 @@
-﻿public interface Observer  {
-
+﻿public interface Observer {
     void ObserverUpdate();
 }

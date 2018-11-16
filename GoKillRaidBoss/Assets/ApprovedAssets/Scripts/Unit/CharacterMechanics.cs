@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CharacterMechanics : MonoBehaviour {
-
     //Основные параметры
     public float speedMove;
     public float jumpPower;
@@ -40,6 +39,7 @@ public class CharacterMechanics : MonoBehaviour {
     }
 
     public float speedometr;
+
     IEnumerator SpeedCalculator() {
         for (;;) {
             Vector3 startPoint = transform.position;
@@ -81,7 +81,7 @@ public class CharacterMechanics : MonoBehaviour {
 
             //поворот персонажа в сторону направления перемещения
             if ((Vector3.Angle(Vector3.forward, moveVector) > 1f ||
-                Vector3.Angle(Vector3.forward, moveVector) == 0) &&
+                 Vector3.Angle(Vector3.forward, moveVector) == 0) &&
                 ch_animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "StandingAimRecoil" &&
                 !ch_animator.GetBool("Attack2")) {
                 Vector3 direct = Vector3.RotateTowards(transform.forward, moveVector, speedMove, 0.0f);
@@ -94,7 +94,7 @@ public class CharacterMechanics : MonoBehaviour {
         moveVector.y = gravityForce;
         if (ch_animator.GetCurrentAnimatorClipInfo(0)[0].clip.name != "StandingAimRecoil"
             && !ch_animator.GetCurrentAnimatorStateInfo(0).IsTag("Dive")) {
-            ch_controller.Move(moveVector * Time.deltaTime);//Метод передвижения по направлению
+            ch_controller.Move(moveVector * Time.deltaTime); //Метод передвижения по направлению
         }
     }
 

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AnimatorDiveScript : StateMachineBehaviour {
-
     public GameObject owner;
     float timer;
 
@@ -14,17 +13,15 @@ public class AnimatorDiveScript : StateMachineBehaviour {
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-
         timer += Time.deltaTime;
 
-        if (timer > 0.01f && timer < 0.4f ) {
+        if (timer > 0.01f && timer < 0.4f) {
             owner.GetComponentInChildren<CharacterMechanics>().isDive = true;
         }
 
         if (timer > 0.4f) {
-            owner.GetComponentInChildren<CharacterMechanics>().isDive = false;        
+            owner.GetComponentInChildren<CharacterMechanics>().isDive = false;
         }
-
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state

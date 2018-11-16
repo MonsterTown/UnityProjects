@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 //Класс принимающий управление персонажем
 public class PlayerController : MonoBehaviour {
-
     UnitStats unitStats;
     Animator animator;
 
@@ -37,10 +36,9 @@ public class PlayerController : MonoBehaviour {
 
     //For Android
     private void PlayerMobileController() {
-
         UpdateMouseOverGUI();
 
-        if (Input.GetKeyDown(KeyCode.Space) || guiRollButton.input) {  //Приказ на кувырок
+        if (Input.GetKeyDown(KeyCode.Space) || guiRollButton.input) { //Приказ на кувырок
             characterMechanics.doDive = true;
         }
 
@@ -57,7 +55,6 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-
     public void UpdateMouseOverGUI() {
         ped.position = Input.mousePosition;
         gr.Raycast(ped, results);
@@ -67,11 +64,11 @@ public class PlayerController : MonoBehaviour {
                 break;
             }
         }
+
         results.Clear();
     }
 
     public void OrderAttackFromDisplayClick() {
-
         RaycastHit hit;
         int layerMaskUnit = LayerMask.GetMask("Unit"); //Рейкаст только в слой  Unit (только)
 
@@ -82,9 +79,8 @@ public class PlayerController : MonoBehaviour {
     }
 
     public void OrderAttackFromButton() {
-
         int layerMaskGround = LayerMask.GetMask("Default"); //Рейкаст только в слой  Default (только)
-        int layerMaskUnit = LayerMask.GetMask("Unit"); //Рейкаст только в слой  Unit (только)
+        int layerMaskUnit = LayerMask.GetMask("Unit");      //Рейкаст только в слой  Unit (только)
 
         GameObject target = UnitHelpers.FindClosestEnemyUnit(gameObject, 30);
         GetComponent<UnitStats>().attackScript.targetAttack = target;
@@ -95,7 +91,6 @@ public class PlayerController : MonoBehaviour {
     }
 
     private void SetHealthBarEnemy(GameObject target) {
-
         GameController.instance.GetComponent<GameController>().healthBarEnemy.SetActive(true);
         GameController.instance.GetComponent<GameController>().healthBarEnemy.GetComponent<HealthBarEnemyScript>().SetTarget(target);
     }

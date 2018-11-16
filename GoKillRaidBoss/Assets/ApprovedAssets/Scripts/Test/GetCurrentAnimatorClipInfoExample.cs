@@ -1,15 +1,13 @@
 ﻿using UnityEngine;
 
-public class GetCurrentAnimatorClipInfoExample : MonoBehaviour
-{
+public class GetCurrentAnimatorClipInfoExample : MonoBehaviour {
     Animator m_Animator;
     string m_ClipName;
     AnimatorClipInfo[] m_CurrentClipInfo;
 
     float m_CurrentClipLength;
 
-    void Update()
-    {
+    void Update() {
         //Get them_Animator, which you attach to the GameObject you intend to animate.
         m_Animator = gameObject.GetComponent<Animator>();
         //Fetch the current Animation clip information for the base layer
@@ -22,8 +20,7 @@ public class GetCurrentAnimatorClipInfoExample : MonoBehaviour
 
     //animator.GetCurrentAnimatorClipInfo(0).clip.name;
 
-    void OnGUI()
-    {
+    void OnGUI() {
         //Output the current Animation name and length to the screen
         GUI.Label(new Rect(0, 0, 400, 40), "Clip Name : " + m_ClipName);
         GUI.Label(new Rect(0, 30, 400, 40), "Clip Length : " + m_CurrentClipLength);

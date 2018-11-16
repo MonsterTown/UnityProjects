@@ -2,8 +2,7 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class HealthBarsScript : MonoBehaviour
-{
+public class HealthBarsScript : MonoBehaviour {
     public GameObject player;
 
     string barName;
@@ -11,15 +10,12 @@ public class HealthBarsScript : MonoBehaviour
     float HealthMax;
 
 
-    void Start()
-    {
+    void Start() {
         barName = transform.name;
     }
 
-    void Update()
-    {
-        if (barName == "HealthCur")
-        {
+    void Update() {
+        if (barName == "HealthCur") {
             HealthCur = player.GetComponent<UnitStats>().Health.HealthCur;
             HealthMax = player.GetComponent<UnitStats>().Health.HealthMax;
             GetComponent<Image>().fillAmount = HealthCur / HealthMax;

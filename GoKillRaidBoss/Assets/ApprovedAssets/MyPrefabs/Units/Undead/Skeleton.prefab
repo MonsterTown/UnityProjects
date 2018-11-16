@@ -40,6 +40,7 @@ GameObject:
   - component: {fileID: 114972299455720968}
   - component: {fileID: 114815561527418022}
   - component: {fileID: 114202638881075422}
+  - component: {fileID: 114872439312220108}
   - component: {fileID: 114652140444814200}
   - component: {fileID: 114328350187117018}
   - component: {fileID: 114961146737976918}
@@ -1899,8 +1900,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1052569852604940}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 151.82, y: 0, z: 147.72}
+  m_LocalRotation: {x: -0, y: -0.8993671, z: -0, w: 0.43719438}
+  m_LocalPosition: {x: 151.82, y: 0, z: 166.64}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4229594702703522}
@@ -2596,54 +2597,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -2664,6 +2680,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &114191443420065630
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2691,56 +2708,16 @@ MonoBehaviour:
   hitBox: {fileID: 1121656913216070}
   deadScript: {fileID: 11400000, guid: d10597f4726c1ff4c93acbbc4f2589fd, type: 2}
   attackScript: {fileID: 11400000, guid: 606de02e5b0a9df4bb7533123c44b8b5, type: 2}
-  healthCur: 500
+  AttackersList: {fileID: 0}
+  Health: {fileID: 0}
   healthMax: 500
   healthRegen: 1
-  regenOn: 1
   lookRange: 30
   attackRange: 2
   attackDamage: 5
   minDamage: 0.8
   maxDamage: 1.2
-  targetHitList: []
-  attackTarget: {fileID: 0}
   armor: 0
-  attackers: []
-  Strength:
-    BaseValue: 0
-  Agility:
-    BaseValue: 0
-  Intelligence:
-    BaseValue: 0
-  Spirit:
-    BaseValue: 0
-  Vitality:
-    BaseValue: 0
-  skillPointsValue: 0
-  AttackPower:
-    BaseValue: 0
-  BlockPower:
-    BaseValue: 0
-  AttackSpeed:
-    BaseValue: 0
-  MoveSpeed:
-    BaseValue: 0
-  Evasion:
-    BaseValue: 0
-  Mana:
-    BaseValue: 0
-  Energy:
-    BaseValue: 0
-  SpellPower:
-    BaseValue: 0
-  HealthRegeneration:
-    BaseValue: 0
-  ManaRegeneration:
-    BaseValue: 0
-  EnergyRegeneration:
-    BaseValue: 0
-  Health:
-    BaseValue: 0
-  Toxity:
-    BaseValue: 0
 --- !u!114 &114328350187117018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2861,6 +2838,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
+--- !u!114 &114872439312220108
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1052569852604940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a7d730ece772a442bb73e03f92e4118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Strength:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Agility:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Intelligence:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Spirit:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Vitality:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  skillPointsValue: 0
+  AttackPower:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  BlockPower:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  AttackSpeed:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  MoveSpeed:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Evasion:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Mana:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Energy:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  SpellPower:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  HealthRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 1
+    _value: 0
+  ManaRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  EnergyRegeneration:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  HealEffectiveness:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
+  Health:
+    owner: {fileID: 0}
+    BaseValue: 500
+    _value: 0
+  Toxity:
+    owner: {fileID: 0}
+    BaseValue: 0
+    _value: 0
 --- !u!114 &114961146737976918
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2957,6 +3022,7 @@ SkinnedMeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 4294967295
   m_Materials:
   - {fileID: 2100000, guid: 7d99630e4d5e92b43b38292a6c902370, type: 2}
   m_StaticBatchInfo:

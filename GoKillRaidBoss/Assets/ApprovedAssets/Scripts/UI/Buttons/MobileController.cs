@@ -4,33 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class MobileController : MonoBehaviour, IDragHandler,IPointerUpHandler,IPointerDownHandler {
-
+public class MobileController : MonoBehaviour, IDragHandler, IPointerUpHandler, IPointerDownHandler {
     private Image joystickBG;
-    [SerializeField]
-    private Image joystick;
+    [SerializeField] private Image joystick;
     private Vector2 inputVector;
 
-    private void Start()
-    {
+    private void Start() {
         joystickBG = GetComponent<Image>();
         joystick = transform.GetChild(0).GetComponent<Image>();
     }
 
-    public virtual void OnPointerDown(PointerEventData ped)
-    {
+    public virtual void OnPointerDown(PointerEventData ped) {
         OnDrag(ped);
     }
-    public virtual void OnPointerUp(PointerEventData ped)
-    {
+
+    public virtual void OnPointerUp(PointerEventData ped) {
         inputVector = Vector2.zero;
         joystick.rectTransform.anchoredPosition = Vector2.zero;
     }
-    public virtual void OnDrag(PointerEventData ped)
-    {
+
+    public virtual void OnDrag(PointerEventData ped) {
         Vector2 pos;
-        if(RectTransformUtility.ScreenPointToLocalPointInRectangle(joystickBG.rectTransform,ped.position,ped.pressEventCamera, out pos))
-        {
+        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(joystickBG.rectTransform, ped.position, ped.pressEventCamera, out pos)) {
             pos.x = (pos.x / joystick.rectTransform.sizeDelta.x);
             pos.y = (pos.y / joystick.rectTransform.sizeDelta.x);
 
@@ -41,14 +36,12 @@ public class MobileController : MonoBehaviour, IDragHandler,IPointerUpHandler,IP
         }
     }
 
-    public float Horizontal()
-    {
+    public float Horizontal() {
         if (inputVector.x != 0) return inputVector.normalized.x;
         else return Input.GetAxis("Horizontal");
     }
 
-    public float Vertical()
-    {
+    public float Vertical() {
         if (inputVector.y != 0) return inputVector.normalized.y;
         else return Input.GetAxis("Vertical");
     }

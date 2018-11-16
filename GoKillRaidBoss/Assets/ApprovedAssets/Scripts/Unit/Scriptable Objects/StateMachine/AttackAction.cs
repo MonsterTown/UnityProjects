@@ -10,7 +10,6 @@ public class AttackAction : Action {
     }
 
     private void Attack(StateController controller) {
-
         Animator animator = controller.GetComponent<Animator>();
 
         animator.SetBool("Move", false);
@@ -18,6 +17,5 @@ public class AttackAction : Action {
         controller.GetComponent<AIPath>().canMove = false;
 
         animator.SetInteger("Attack", Random.Range(1, 8));
-
     }
 }
