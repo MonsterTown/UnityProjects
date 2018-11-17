@@ -33,9 +33,9 @@ public class FPS : MonoBehaviour {
         GUI.skin.label.fontSize = GUI.skin.box.fontSize = GUI.skin.button.fontSize = fontSize;
 
         GUI.contentColor = Color.red;
-        GUI.Box(new Rect(10, 10, 150, 50), "");
-        GUI.Box(new Rect(10, 10, 150, 50), "");
+        GUI.Box(new Rect(Screen.width - 160, 10, 150, 50), "");
+        GUI.Box(new Rect(Screen.width - 160, 10, 150, 50), "");
         GUI.contentColor = Color.white;
-        GUI.Box(new Rect(10, 10, 150, 50), "FPS = " + (int) fps);
+        GUI.Box(new Rect(Screen.width - 160, 10, 150, 50), "FPS = " + (int) fps);
     }
 }

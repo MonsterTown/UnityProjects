@@ -62,10 +62,12 @@
     <Compile Include="Assets\ApprovedAssets\Scripts\Camera\UpdateCamera.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Controllers\GameController.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Controllers\PlayerController.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Controllers\UIManager.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Debug\FPS.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\GameObjectTags.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Patterns\ObserverPattern\Observable.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Patterns\ObserverPattern\Observer.cs" />
+    <Compile Include="Assets\ApprovedAssets\Scripts\Patterns\Singleton\Singleton.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Test\GetCurrentAnimatorClipInfoExample.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\Test\TestClass.cs" />
     <Compile Include="Assets\ApprovedAssets\Scripts\UI\Buttons\MobileController.cs" />

@@ -60,6 +60,6 @@ public class Health : MonoBehaviour, Observer {
     }
 
     public void ObserverUpdate() {
-        GetComponent<UnitAttributes>().HealthCalculate();
+         GetComponent<UnitStats>().UnitAttributes.HealthCalculate();
     }
 }

@@ -11,7 +11,8 @@ public class UnitStats : MonoBehaviour {
     public AbstractAttack attackScript;
     [HideInInspector] public TakingDamage TakingDamage;
     [HideInInspector] public AttackersList AttackersList;
-    [SerializeField] public Health Health;
+    public Health Health;
+    [SerializeField] public UnitAttributes UnitAttributes;
 
     #region Fields
 
@@ -37,6 +38,14 @@ public class UnitStats : MonoBehaviour {
         AttackersList = transform.root.gameObject.AddComponent<AttackersList>();
         AttackersList.Init(transform.root.gameObject);
         Health = transform.root.gameObject.AddComponent<Health>();
+        UnitAttributes.Init(transform.root.gameObject);
+    }
+
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.T)) {
+            var i = UnitAttributes.Health.StatModifiers.Count;
+            Debug.Log("Количество модификаторов в хелсе" +i);
+        }
     }
 
     #region HitEvent

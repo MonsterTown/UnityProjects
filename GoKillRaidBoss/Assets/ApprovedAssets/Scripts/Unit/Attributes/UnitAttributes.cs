@@ -1,14 +1,21 @@
-﻿using Kryz.CharacterStats;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using Kryz.CharacterStats;
 using UnityEngine;
 
-public class UnitAttributes : MonoBehaviour {
+
+//Класс с атрибутами юнита, тут они пересчитываются и обновляются
+[Serializable]
+public class UnitAttributes {
+    private GameObject self;
+
     #region PrimaryAttributes
 
-    [Space(1, order = 0)] [Header("Primary Attributes", order = 1)] [Space(4, order = 2)]
+    [Space(1, order = 0)]
+    [Header("Primary Attributes", order = 1)]
+    [Space(4, order = 2)]
+    [SerializeField]
     public CharacterStat Strength;
-
     public CharacterStat Agility;
     public CharacterStat Intelligence;
     public CharacterStat Spirit;
@@ -16,14 +23,17 @@ public class UnitAttributes : MonoBehaviour {
 
     #endregion
 
-    [Space(1, order = 0)] [Header("Attribute Points", order = 1)] [Space(4, order = 2)]
+    [Space(1, order = 0)]
+    [Header("Attribute Points", order = 1)]
+    [Space(4, order = 2)]
     public float skillPointsValue;
 
     #region SecondaryAttributes
 
-    [Space(1, order = 0)] [Header("Secondary Attributes", order = 1)] [Space(4, order = 2)]
+    [Space(1, order = 0)]
+    [Header("Secondary Attributes", order = 1)]
+    [Space(4, order = 2)]
     public CharacterStat AttackPower;
-
     public CharacterStat BlockPower;
     public CharacterStat AttackSpeed;
     public CharacterStat MoveSpeed;
@@ -34,7 +44,7 @@ public class UnitAttributes : MonoBehaviour {
     public CharacterStat HealthRegeneration;
     public CharacterStat ManaRegeneration;
     public CharacterStat EnergyRegeneration;
-    public CharacterStat HealEffectiveness; //Эффективность лечения, увеличивает получаемое лечение
+    public CharacterStat HealEffectiveness;
     public CharacterStat Health;
     public CharacterStat Toxity;
 
@@ -51,12 +61,13 @@ public class UnitAttributes : MonoBehaviour {
     private StatModifier healEffectivMod;
     private StatModifier manaRegenMod;
     private StatModifier energyRegenMod;
-    private StatModifier toxityMod;
+    private StatModifier toxityMod;  
 
     #endregion
 
 
-    void Start() {
+    public void Init(GameObject self) { //Возможно нужно OnEnable
+        this.self = self;
         InitStatsModifiers(); //TODO: Возможно нужен класс инициализатор который будет пересчитывать характеристики где то в одном классе
         SecondaryAttributesObserverInit();
         CalculateAttributes();
@@ -84,38 +95,38 @@ public class UnitAttributes : MonoBehaviour {
 
         //======================
 
-        Strength.owner = gameObject;
-        Agility.owner = gameObject;
-        Intelligence.owner = gameObject;
-        Spirit.owner = gameObject;
-        Vitality.owner = gameObject;
+        Strength.owner = self;
+        Agility.owner = self;
+        Intelligence.owner = self;
+        Spirit.owner = self;
+        Vitality.owner = self;
 
         //============
-        AttackPower.owner = gameObject;
-        BlockPower.owner = gameObject;
+        AttackPower.owner = self;
+        BlockPower.owner = self;
 
-        AttackSpeed.owner = gameObject;
-        MoveSpeed.owner = gameObject;
-        Evasion.owner = gameObject;
+        AttackSpeed.owner = self;
+        MoveSpeed.owner = self;
+        Evasion.owner = self;
 
-        SpellPower.owner = gameObject;
-        Mana.owner = gameObject;
+        SpellPower.owner = self;
+        Mana.owner = self;
 
-        Health.owner = gameObject;
-        Toxity.owner = gameObject;
+        Health.owner = self;
+        Toxity.owner = self;
 
-
-        Energy.owner = gameObject;
-        HealthRegeneration.owner = gameObject;
-        ManaRegeneration.owner = gameObject;
-        EnergyRegeneration.owner = gameObject;
-        HealEffectiveness.owner = gameObject;
+        Energy.owner = self;
+        HealthRegeneration.owner = self;
+        ManaRegeneration.owner = self;
+        EnergyRegeneration.owner = self;
+        HealEffectiveness.owner = self;
     }
 
     //Подписка вторичных аттрибутов на классы статы.
     public void SecondaryAttributesObserverInit() {
-        Health.AddObserver(gameObject.GetComponent<UnitStats>().Health); //Подписка по паттерну обсервер
-        HealthRegeneration.AddObserver(gameObject.GetComponent<UnitStats>().Health);
+        Health.AddObserver(self.GetComponent<UnitStats>().Health); //Подписка по паттерну обсервер
+        
+        HealthRegeneration.AddObserver(self.GetComponent<UnitStats>().Health);
     }
 
     //Тут пересчитываются все вторичные атрибуты
@@ -182,17 +193,20 @@ public class UnitAttributes : MonoBehaviour {
 
         //Костыль
         HealthCalculate();
+
+        if (OnCalculate != null) {
+            OnCalculate();
+        }
     }
 
     //Перерасчет непосредственно статов
     public void HealthCalculate() {
-        gameObject.GetComponent<UnitStats>().Health.HealthMax = Health.Value;
-        gameObject.GetComponent<UnitStats>().attackDamage = AttackPower.Value;
-        gameObject.GetComponent<UnitStats>().Health.HealthRegen = HealthRegeneration.Value;
+        self.GetComponent<UnitStats>().Health.HealthMax = Health.Value;
+        self.GetComponent<UnitStats>().attackDamage = AttackPower.Value;
+        self.GetComponent<UnitStats>().Health.HealthRegen = HealthRegeneration.Value;
     }
 
-    //Для паттрена обсервер, он срабатывает только тогда когда срабатывает геттер.
-    private void OnGUI() {
-        GetComponent<UnitAttributes>().Health.Value.ToString();
-    }
+    public delegate void CalculateAction();
+
+    public event CalculateAction OnCalculate;
 }

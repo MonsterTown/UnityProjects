@@ -5,13 +5,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class UI_AttributesUpdateValue : MonoBehaviour {
-    public GameObject player;
+//Названия значения полей в интерфейсе юзера
+public enum AttributesNameUI {
+    AttackPowerValue,
+    BlockPowerValue,
+    AttackSpeedValue,
+    MoveSpeedValue,
+    EvasionValue,
+    SpellPowerValue,
+    ManaValue,
+    EnergyValue,
+    HealthRegenValue,
+    ManaRegenValue,
+    EnergyRegenValue,
+    HealEffectivValue,
+    HealthValue,
+    ToxityValue,
+}
 
+[Serializable]
+public class UI_AttributesUpdateValue :  Observer {
+    public GameObject player;
 
     [Space(1, order = 0)] [Header("Primary Attributes", order = 1)] [Space(4, order = 2)]
     public Text strengthValue;
-
     public Text agilityValue;
     public Text intelligenceValue;
     public Text spiritValue;
@@ -21,7 +38,6 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
 
     [Space(1, order = 0)] [Header("Secondary Attributes", order = 1)] [Space(4, order = 2)]
     public Text attackPowerValue;
-
     public Text blockPowerValue;
     public Text attackSpeedValue;
     public Text moveSpeedValue;
@@ -32,54 +48,58 @@ public class UI_AttributesUpdateValue : MonoBehaviour {
     public Text healthRegenValue;
     public Text manaRegenValue;
     public Text energyRegenValue;
-    public Text healthEffectivValue;
+    public Text healEffectivValue;
     public Text healthValue;
     public Text toxityValue;
 
     [Space(1, order = 0)] [Header("Quick Menu Stats", order = 1)] [Space(4, order = 2)]
     public Text quickHealth;
-
     public Text quickAttackPower;
     public Text quickSpellPower;
     public Text quickMana;
+    
 
-    void Start() {
-        StartCoroutine(Rewrite()); //Старт регенерации хитов, маны и усталости.
+    public void Start() {
+        Rewrite();
+        //  player.GetComponent<UnitStats>().UnitAttributes.Health.AddObserver(this); //Подписка по паттерну обсервер
+          player.GetComponent<UnitStats>().UnitAttributes.OnCalculate += ObserverUpdate; //Подписка по паттерну обсервер
     }
 
-    IEnumerator Rewrite() {
-        while (true) {
-            //Primary
-            strengthValue.text = player.GetComponent<UnitAttributes>().Strength.Value.ToString();
-            agilityValue.text = player.GetComponent<UnitAttributes>().Agility.Value.ToString();
-            intelligenceValue.text = player.GetComponent<UnitAttributes>().Intelligence.Value.ToString();
-            spiritValue.text = player.GetComponent<UnitAttributes>().Spirit.Value.ToString();
-            vitalityValue.text = player.GetComponent<UnitAttributes>().Vitality.Value.ToString();
+    //Переписывает значения с атрибутов в UI меню
+    void Rewrite() {
 
-            skillPointsValue.text = player.GetComponent<UnitAttributes>().skillPointsValue.ToString();
+        //Primary
+        strengthValue.text = player.GetComponent<UnitStats>().UnitAttributes.Strength.Value.ToString();
+        agilityValue.text = player.GetComponent<UnitStats>().UnitAttributes.Agility.Value.ToString();
+        intelligenceValue.text = player.GetComponent<UnitStats>().UnitAttributes.Intelligence.Value.ToString();
+        spiritValue.text = player.GetComponent<UnitStats>().UnitAttributes.Spirit.Value.ToString();
+        vitalityValue.text = player.GetComponent<UnitStats>().UnitAttributes.Vitality.Value.ToString();
 
-            //Secondary
-            attackPowerValue.text = player.GetComponent<UnitAttributes>().AttackPower.Value.ToString();
-            blockPowerValue.text = player.GetComponent<UnitAttributes>().BlockPower.Value.ToString();
-            attackSpeedValue.text = player.GetComponent<UnitAttributes>().AttackSpeed.Value.ToString();
-            moveSpeedValue.text = player.GetComponent<UnitAttributes>().MoveSpeed.Value.ToString();
-            evasionValue.text = player.GetComponent<UnitAttributes>().Evasion.Value.ToString();
-            spellPowerValue.text = player.GetComponent<UnitAttributes>().SpellPower.Value.ToString();
-            manaValue.text = player.GetComponent<UnitAttributes>().Mana.Value.ToString();
-            energyValue.text = player.GetComponent<UnitAttributes>().Energy.Value.ToString();
-            healthRegenValue.text = player.GetComponent<UnitAttributes>().HealthRegeneration.Value.ToString();
-            manaRegenValue.text = player.GetComponent<UnitAttributes>().ManaRegeneration.Value.ToString();
-            energyRegenValue.text = player.GetComponent<UnitAttributes>().EnergyRegeneration.Value.ToString();
-            healthEffectivValue.text = player.GetComponent<UnitAttributes>().HealEffectiveness.Value.ToString();
-            healthValue.text = player.GetComponent<UnitAttributes>().Health.Value.ToString();
-            toxityValue.text = player.GetComponent<UnitAttributes>().Toxity.Value.ToString();
+        skillPointsValue.text = player.GetComponent<UnitStats>().UnitAttributes.skillPointsValue.ToString();
 
-            //Quick
-            quickHealth.text = healthValue.text;
-            quickAttackPower.text = attackPowerValue.text;
-            quickSpellPower.text = spellPowerValue.text;
+        //Secondary
+        attackPowerValue.text = player.GetComponent<UnitStats>().UnitAttributes.AttackPower.Value.ToString();
+        blockPowerValue.text = player.GetComponent<UnitStats>().UnitAttributes.BlockPower.Value.ToString();
+        attackSpeedValue.text = player.GetComponent<UnitStats>().UnitAttributes.AttackSpeed.Value.ToString();
+        moveSpeedValue.text = player.GetComponent<UnitStats>().UnitAttributes.MoveSpeed.Value.ToString();
+        evasionValue.text = player.GetComponent<UnitStats>().UnitAttributes.Evasion.Value.ToString();
+        spellPowerValue.text = player.GetComponent<UnitStats>().UnitAttributes.SpellPower.Value.ToString();
+        manaValue.text = player.GetComponent<UnitStats>().UnitAttributes.Mana.Value.ToString();
+        energyValue.text = player.GetComponent<UnitStats>().UnitAttributes.Energy.Value.ToString();
+        healthRegenValue.text = player.GetComponent<UnitStats>().UnitAttributes.HealthRegeneration.Value.ToString();
+        manaRegenValue.text = player.GetComponent<UnitStats>().UnitAttributes.ManaRegeneration.Value.ToString();
+        energyRegenValue.text = player.GetComponent<UnitStats>().UnitAttributes.EnergyRegeneration.Value.ToString();
+        healEffectivValue.text = player.GetComponent<UnitStats>().UnitAttributes.HealEffectiveness.Value.ToString();
+        healthValue.text = player.GetComponent<UnitStats>().UnitAttributes.Health.Value.ToString();
+        toxityValue.text = player.GetComponent<UnitStats>().UnitAttributes.Toxity.Value.ToString();
 
-            yield return new WaitForSeconds(0.05f);
-        }
+        //Quick
+        quickHealth.text = healthValue.text;
+        quickAttackPower.text = attackPowerValue.text;
+        quickSpellPower.text = spellPowerValue.text;
+    }
+
+    public void ObserverUpdate() {
+        Rewrite();
     }
 }

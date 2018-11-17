@@ -40,7 +40,6 @@ GameObject:
   - component: {fileID: 114972299455720968}
   - component: {fileID: 114815561527418022}
   - component: {fileID: 114202638881075422}
-  - component: {fileID: 114872439312220108}
   - component: {fileID: 114652140444814200}
   - component: {fileID: 114328350187117018}
   - component: {fileID: 114961146737976918}
@@ -2710,8 +2709,6 @@ MonoBehaviour:
   attackScript: {fileID: 11400000, guid: 606de02e5b0a9df4bb7533123c44b8b5, type: 2}
   AttackersList: {fileID: 0}
   Health: {fileID: 0}
-  healthMax: 500
-  healthRegen: 1
   lookRange: 30
   attackRange: 2
   attackDamage: 5
@@ -2838,94 +2835,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   target: {fileID: 0}
---- !u!114 &114872439312220108
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1052569852604940}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7d730ece772a442bb73e03f92e4118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Strength:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Agility:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Intelligence:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Spirit:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Vitality:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  skillPointsValue: 0
-  AttackPower:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  BlockPower:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  AttackSpeed:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  MoveSpeed:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Evasion:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Mana:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Energy:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  SpellPower:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  HealthRegeneration:
-    owner: {fileID: 0}
-    BaseValue: 1
-    _value: 0
-  ManaRegeneration:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  EnergyRegeneration:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  HealEffectiveness:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Health:
-    owner: {fileID: 0}
-    BaseValue: 500
-    _value: 0
-  Toxity:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
 --- !u!114 &114961146737976918
 MonoBehaviour:
   m_ObjectHideFlags: 1

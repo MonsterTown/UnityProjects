@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="C:\Users\Артур Марат Карина\.Rider2018.2\config\extensions" t="IncludeRecursive" />
     <e p="C:\Users\Артур Марат Карина\.Rider2018.2\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Артур Марат Карина\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_GoKillRaidBoss.2018516010.00" t="ExcludeRecursive" />
     <e p="D:\UnityProjects\GitHub\GoKillRaidBoss" t="IncludeRecursive">
@@ -46,6 +47,7 @@
             <e p="Controllers" t="Include">
               <e p="GameController.cs" t="Include" />
               <e p="PlayerController.cs" t="Include" />
+              <e p="UIManager.cs" t="Include" />
             </e>
             <e p="Debug" t="Include">
               <e p="FPS.cs" t="Include" />
@@ -55,6 +57,9 @@
               <e p="ObserverPattern" t="Include">
                 <e p="Observable.cs" t="Include" />
                 <e p="Observer.cs" t="Include" />
+              </e>
+              <e p="Singleton" t="Include">
+                <e p="Singleton.cs" t="Include" />
               </e>
             </e>
             <e p="Test" t="Include">

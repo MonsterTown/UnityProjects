@@ -1,10 +1,12 @@
+using System;
+
 namespace Kryz.CharacterStats {
     public enum StatModType {
         Flat = 100,
         PercentAdd = 200,
-        PercentMult = 300,
+        PercentMult = 300
     }
-
+    [Serializable]
     public class StatModifier {
         public readonly float Value;
         public readonly StatModType Type;

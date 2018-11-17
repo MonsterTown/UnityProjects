@@ -817,9 +817,6 @@ GameObject:
   - component: {fileID: 114086334318751576}
   - component: {fileID: 114504192164850130}
   - component: {fileID: 114729404605734710}
-  - component: {fileID: 114048419733346932}
-  - component: {fileID: 114469203498846360}
-  - component: {fileID: 114277977166675580}
   m_Layer: 8
   m_Name: "\u041A\u0440\u0438\u0432\u043E\u0439 \u0445\u0440\u044F\u0449 \u043F\u043E\u0442\u043D\u044B\u0439
     \u043B\u043E\u0441\u044C"
@@ -2205,94 +2202,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114048419733346932
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732098422377318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a7d730ece772a442bb73e03f92e4118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Strength:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Agility:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Intelligence:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Spirit:
-    owner: {fileID: 0}
-    BaseValue: 0
-    _value: 0
-  Vitality:
-    owner: {fileID: 0}
-    BaseValue: 38.09
-    _value: 0.31
-  skillPointsValue: 0
-  AttackPower:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  BlockPower:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  AttackSpeed:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  MoveSpeed:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  Evasion:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  Mana:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  Energy:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  SpellPower:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  HealthRegeneration:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  ManaRegeneration:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  EnergyRegeneration:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  HealEffectiveness:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
-  Health:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 2262
-    _value: 2036
-  Toxity:
-    owner: {fileID: 1732098422377318}
-    BaseValue: 0
-    _value: 0
 --- !u!114 &114086334318751576
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2323,21 +2232,6 @@ MonoBehaviour:
   alwaysDrawGizmos: 0
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
---- !u!114 &114277977166675580
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732098422377318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db89fc7dafb74b1391f949d6135480f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthCur: 976.83325
-  healthMax: 2000
-  healthRegen: 0
-  regenOn: 1
 --- !u!114 &114341686865817322
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2367,18 +2261,6 @@ MonoBehaviour:
   targetForChaseOrAttack: {fileID: 0}
   stateTimeElapsed: 0
   enemies: []
---- !u!114 &114469203498846360
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1732098422377318}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aeca2603ac77f9f4aa043f8a542ab3ca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackers: []
 --- !u!114 &114504192164850130
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2420,10 +2302,8 @@ MonoBehaviour:
   hitBox: {fileID: 1046609630558526}
   deadScript: {fileID: 11400000, guid: d10597f4726c1ff4c93acbbc4f2589fd, type: 2}
   attackScript: {fileID: 11400000, guid: 606de02e5b0a9df4bb7533123c44b8b5, type: 2}
-  AttackersList: {fileID: 114469203498846360}
-  Health: {fileID: 114277977166675580}
-  healthMax: 2000
-  healthRegen: 1
+  AttackersList: {fileID: 0}
+  Health: {fileID: 0}
   lookRange: 30
   attackRange: 6
   attackDamage: 10

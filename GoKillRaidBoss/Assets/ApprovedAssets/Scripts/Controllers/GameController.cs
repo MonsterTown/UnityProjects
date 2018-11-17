@@ -27,7 +27,6 @@ public class GameController : MonoBehaviour {
 
     public void ButtonCharacterMenu() {
         if (Input.GetKeyDown(KeyCode.I) || guiCharMenuButton.trigger) {
-            Debug.Log(guiCharMenuButton.trigger + "  " + guiCharMenuButtonClose.input);
 
             if (menuCharacter.activeSelf) {
                 menuCharacter.SetActive(false);
