@@ -76,6 +76,8 @@ namespace Kryz.CharacterStats {
                     didRemove = true;
                     statModifiers.RemoveAt(i);
                 }
+                lastBaseValue = BaseValue;
+                Value = CalculateFinalValue();
             }
 
             return didRemove;
@@ -120,7 +122,7 @@ namespace Kryz.CharacterStats {
         public void ObserverUpdate() {
             if (owner) {
                 owner.GetComponent<UnitStats>().UnitAttributes.CalculateAttributes();
-                Debug.Log("Receive update, someone change stat!");
+                //Debug.Log("Receive update, someone change stat!");
             }
         }
 
